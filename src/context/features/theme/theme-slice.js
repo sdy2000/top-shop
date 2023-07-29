@@ -17,10 +17,16 @@ const initialState = () => {
 const themeSlice = createSlice({
   name: "theme",
   initialState,
-  reducers: {},
+  reducers: {
+    chengTheme: (state) => {
+      state.theme = state.theme === "dark" ? "light" : "dark";
+
+      localStorage.setItem("theme", JSON.stringify(state));
+    },
+  },
   extraReducers: (builder) => {},
 });
 
-// export const {} = themeSlice.actions;
+export const { chengTheme } = themeSlice.actions;
 
 export default themeSlice.reducer;
