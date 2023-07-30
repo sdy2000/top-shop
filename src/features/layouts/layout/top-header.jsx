@@ -1,13 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 import { ThemeButton } from "./components";
-import { currency, language } from "./data";
+import { barDiffLanguage, currency, language } from "./data";
 import { onChangeCurrency, onChangeLanguage } from "@/context/features";
 
 const TopHeader = () => {
   const dispatch = useDispatch();
   const currentCurrency = useSelector((store) => store.currency);
   const currentLanguage = useSelector((store) => store.language);
+  const { data } = barDiffLanguage.find(
+    (bar) => bar.lan === currentLanguage.symbol
+  );
 
+  console.log(data);
   return (
     <div>
       <aside className="site-off desktop-hide">
@@ -34,13 +38,13 @@ const TopHeader = () => {
               <div className="left">
                 <ul className="flexitem main-links">
                   <li>
-                    <a href="#">Blog</a>
+                    <a href="/blog">{data.blog}</a>
                   </li>
                   <li>
-                    <a href="#">Featured Products</a>
+                    <a href="#">{data.featured}</a>
                   </li>
                   <li>
-                    <a href="#">Wishlist</a>
+                    <a href="#">{data.wishlist}</a>
                   </li>
                 </ul>
               </div>
@@ -50,13 +54,13 @@ const TopHeader = () => {
                     <ThemeButton />
                   </li>
                   <li>
-                    <a href="#">Sign Up</a>
+                    <a href="#">{data.sing_up}</a>
                   </li>
                   <li>
-                    <a href="#">My Account</a>
+                    <a href="#">{data.my_account}</a>
                   </li>
                   <li>
-                    <a href="#">Order Tracking</a>
+                    <a href="#">{data.order_tracking}</a>
                   </li>
                   {/* //! //! */}
                   {/* //!  Currency DropDown //!  */}
@@ -106,7 +110,7 @@ const TopHeader = () => {
                   {/* //! //! */}
                   <li>
                     <a href="#">
-                      English
+                      {currentLanguage.language}
                       <span className="icon-small">
                         <i className="ri-arrow-down-s-line"></i>
                       </span>
