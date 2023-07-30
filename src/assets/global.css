@@ -1,14 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Roboto+Slab&family=Rubik&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #794afa;
+    --secondary-dark-color: #453c5c;
+
+    --white-color: #ffffff;
+    --light-bg-color: #f2f3f5;
+    --light-text-color: #7c899a;
+    --border-color: #e5e8ec;
+    --dark-color: #0a021c;
+
+    --font-small: 13px;
+    --font-smaller: 11px;
+
+    --percent100: 100%;
+    --percent50: 50%;
+
+    --fw3: 300;
+    --fw5: 500;
+    --fw6: 600;
+    --fw7: 700;
+    --fw8: 800;
+
+    --trans-background-color: background-color .3s, color .3s;
+    --trans-background: background-color .3s;
+    --trans-color: color .3s;
 }
 
-@layer components {
-  /*============================ Base ============================*/
-  /*--------------- Button ----------------*/
+@layer base {
+    @layer base {
+        *{
+            @apply m-0 p-0;
+        }
+        *,
+        ::before,
+        ::after {
+            @apply box-border;
+        }
+        body {
+            font-family: 'Rubik', sans-serif;
+            @apply bg-white text-dark-color font-fw4 text-[16px] leading-[1.4];
+        }
+        a {
+            @apply no-underline;
+            color: inherit;
+        }
+        ul {
+            @apply list-none
+        }
+
+        img {
+            @apply max-w-full align-middle;
+        }
+        strong {
+            @apply font-extrabold
+        }
+
+        /*table {*/
+        /*    border-collapse: collapse;*/
+        /*    border-radius: 0;*/
+        /*}*/
+
+        input::placeholder {
+            font: inherit;
+        }
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Roboto-Slab', serif;
+        }
+        h1 {
+            font-size: calc(1.3em + 1vw);
+            @apply leading-[1] font-fw8;
+        }
+        h2 {
+            @apply text-[2.5em];
+        }
+        h3 {
+            @apply text-[1.2em] font-fw7;
+        }
+        h4 {
+            @apply text-[1em] font-fw6;
+        }
+    }
 }
+
+/*
+    Reusable Selectors
+*/
+@layer components {
+    .container {
+        @apply max-w-[1280px] my-0 mx-auto py-0 px-[0.938em];
+    }
+    .column {
+        @apply ml-[-0.938em] mr-[-0.938em];
+    }
+    .column .row {
+        @apply py-0 px-[0.938em];
+    }
+    .flexwrap {
+        @apply flex flex-wrap;
+    }
+    .flexcenter {
+        @apply flex items-center justify-center;
+    }
+    .flexitem {
+        @apply flex items-center;
+    }
+    .flexcol {
+        @apply flex flex-col gap-1;
+    }
+    .main-links a:hover {
+        @apply text-secondary-color
+    }
+    .second-links a:hover {
+        @apply text-light-text-color;
+    }
+    .icon-small, .icon-large {
+        font-weight: normal;
+        @apply flex items-center py-0 px-[0.25em];
+    }
+    .icon-small {
+        @apply text-[1.25em] ml-auto;
+    }
+    .icon-large {
+        @apply text-[1.75em] py-0 px-[0.75em];
+    }
+    .mobile-hide{
+        @apply hidden;
+    }
+    .object-cover img {
+        @apply absolute block h-full w-full object-cover;
+    }
+    .products .media {
+        @apply shrink-0 overflow-hidden relative
+    }
+    .primary-button, .secondary-button, .light-button {
+        transform: var(--trans-background-color);
+        @apply py-[0.9em] px-[2em] h-auto w-fit rounded-[2em];
+    }
+    .primary-button {
+        @apply bg-primary-color text-white-color;
+    }
+    .primary-button:hover{
+        @apply bg-dark-color;
+    }
+    .secondary-button {
+        @apply bg-secondary-color text-white-color;
+    }
+    .secondary-button:hover{
+        @apply bg-light-bg-color text-secondary-dark-color;
+    }
+    .primary-button:hover{
+        @apply text-secondary-dark-color bg-light-bg-color;
+    }
+    .light-button {
+        @apply bg-light-bg-color;
+    }
+    .light-button:hover{
+        @apply text-white-color bg-secondary-dark-color;
+    }
+    .view-all {
+        transform: var(--trans-color);
+        @apply gap-[1em] flex text-sm;
+    }
+    .mini-text {
+        @apply text-light-text-color text-sm;
+    }
+}
+
+/*
+    Header
+*/
+:where(.off-canvas, header) li > a {
+    line-height: inherit;
+    transition: var(--trans-color);
+    @apply flex relative;
+}
+
+/*
+    Header
+        a.Header top
+*/
+
+.header-top .wrapper {
+    line-height: 42px;
+    @apply justify-between font-fw3 text-sm;
+}
+
+.header-top .wrapper ul {
+    @apply gap-[2em];
+}
+
+.header-top li {
+    @apply relative;
+}
+.header-top ul ul {
+    @apply hidden absolute bg-white-color border-[1px] border-border-color border-solid z-[1] left-[-1em] leading-[2em];
+}
+
+:where(.header-top, .thetop-nav) .right ul ul li a {
+    @apply py-[0.25em] px-[1em];
+}
+:where(.header-top, .thetop-nav) .right ul ul li.current a{
+    @apply bg-border-color;
+}
+.header-top li:hover ul {
+    @apply block;
+}
+
+/*
+    Header
+        b.Header nav
+*/
+
+.header-nav {
+    @apply py-[0.5em] px-0 mb-[1.5em] border-b-border-color border-[1px] border-solid;
+}
+.trigger {
+    @apply flex text-[1.5em] p-[0.25em] mr-[0.5em];
+}
+.logo a {
+    font-family: 'Roboto-Slab', serif;
+    @apply text-[1.75em] relative font-fw8 flex pl-[0.75em] mr-[2em];
+}
+.circle {
+    @apply absolute top-[-15px] left-[-8px] w-[38px] h-[38px] rounded-[50%] bg-light-bg-color z-[1];
+}
+.circle::before {
+    content: '';
+    @apply opacity-[0.4] absolute right-[5px] bottom-[5px] bg-secondary-color rounded-[50%] h-[28px] w-[28px];
+}
+.header-nav nav > ul{
+    @apply gap-[2em] leading-[100px]
+}
+.fly-item{
+    @apply absolute h-[16px] text-sm p-[3px] text-center leading-[10px] text-white-color;
+}
+nav .fly-item{
+    @apply top-[50%] mt-[-24px] w-[42px] rounded-[3px] right-[-32px] bg-primary-color;
+}
+.header-nav .icon-large .item-number {
+    @apply text-[0.75em];
+}
+.header-nav .right{
+    @apply relative ml-auto;
+}
+.header-nav .right .icon-large {
+    @apply relative;
+}
+.header-nav .right .fly-item {
+    @apply top-0 right-[16px] w-[16px] bg-secondary-dark-color rounded-[50%]
+}
+.header-nav .icon-large .fly-item {
+    width: 20px;
+    height: 20px;
+}
+
 
 @layer utilities {
+
 }
