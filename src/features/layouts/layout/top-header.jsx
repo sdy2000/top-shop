@@ -1,11 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
-import { chengTheme } from "@/context/features";
+import { ThemeButton } from "./components";
 
 const TopHeader = () => {
-  const dispatch = useDispatch();
-  const { theme } = useSelector((store) => store.theme);
-
-  console.log(theme);
   return (
     <div>
       <aside className="site-off desktop-hide">
@@ -45,9 +40,7 @@ const TopHeader = () => {
               <div className="right">
                 <ul className="flexitem main-links">
                   <li>
-                    <button onClick={() => dispatch(chengTheme())}>
-                      Change theme
-                    </button>
+                    <ThemeButton />
                   </li>
                   <li>
                     <a href="#">Sign Up</a>
