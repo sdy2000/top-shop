@@ -1,11 +1,18 @@
+import { useDispatch, useSelector } from "react-redux";
+import { chengTheme } from "@/context/features";
+
 const TopHeader = () => {
+  const dispatch = useDispatch();
+  const { theme } = useSelector((store) => store.theme);
+
+  console.log(theme);
   return (
     <div>
       <aside className="site-off desktop-hide">
         <div className="off-canvas">
           <div className="canvas-head flexitem">
             <div className="logo">
-              <a href="">
+              <a href="/">
                 <span className="circle"></span>.Store
               </a>
             </div>
@@ -37,6 +44,11 @@ const TopHeader = () => {
               </div>
               <div className="right">
                 <ul className="flexitem main-links">
+                  <li>
+                    <button onClick={() => dispatch(chengTheme())}>
+                      Change theme
+                    </button>
+                  </li>
                   <li>
                     <a href="#">Sign Up</a>
                   </li>
