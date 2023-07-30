@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import Layout from "./layouts/layout";
 import { Layout, HomeLayout } from "@/layouts";
+import { HomePage } from "@/pages/home";
 
 function App() {
   return (
@@ -8,7 +9,14 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
-            <Route path="/" element={<HomeLayout />} />
+            {/* //! */}
+            {/* //! */}
+            {/* //! Home Layout //! */}
+            <Route element={<HomeLayout />}>
+              <Route path="*" element={<HomePage />} />
+            </Route>
+            {/* //! */}
+            {/* //! */}
           </Route>
         </Routes>
       </BrowserRouter>
