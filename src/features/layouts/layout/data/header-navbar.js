@@ -344,173 +344,6 @@ export const headerNavbar = [
     ],
   },
   {
-    lan: "ES",
-    bar_data: [
-      { title: "Inicio", slug: "/", order: 1, new: false },
-      { title: "Tienda", slug: "/shop", order: 2, new: false },
-      {
-        title: "Mujeres",
-        slug: "/shop/women",
-        order: 3,
-        new: false,
-        sub_cat: [
-          {
-            header: "Ropa de Mujer",
-            categories: [
-              {
-                title: "Vestidos",
-                slug: "/shop/dresses",
-                order: 1,
-                new: false,
-              },
-              {
-                title: "Tops y Camisetas",
-                slug: "/shop/tops&tees",
-                order: 2,
-                new: false,
-              },
-              {
-                title: "Chaquetas y Abrigos",
-                slug: "/shop/jackets&coats",
-                order: 3,
-                new: false,
-              },
-              {
-                title: "Pantalones y Capris",
-                slug: "/shop/pants&capris",
-                order: 4,
-                new: false,
-              },
-              {
-                title: "Suéteres",
-                slug: "/shop/sweaters",
-                order: 5,
-                new: false,
-              },
-              {
-                title: "Disfraces",
-                slug: "/shop/costumes",
-                order: 6,
-                new: false,
-              },
-              {
-                title: "Sudaderas con Capucha",
-                slug: "/shop/sweatshirts",
-                order: 7,
-                new: false,
-              },
-              {
-                title: "Pijamas y Batas",
-                slug: "/shop/pajamas&robes",
-                order: 8,
-                new: false,
-              },
-              { title: "Shorts", slug: "/shop/shorts", order: 9, new: false },
-              {
-                title: "Trajes de Baño",
-                slug: "/shop/swimwear",
-                order: 10,
-                new: true,
-              },
-            ],
-          },
-          {
-            header: "Joyería",
-            categories: [
-              {
-                title: "Accesorios",
-                slug: "/shop/accessories",
-                order: 1,
-                new: false,
-              },
-              {
-                title: "Bolsos y Carteras",
-                slug: "/shop/bags&purses",
-                order: 2,
-                new: false,
-              },
-              { title: "Anillos", slug: "/shop/rings", order: 3, new: false },
-              { title: "Aretes", slug: "/shop/earrings", order: 4, new: false },
-              {
-                title: "Pulseras",
-                slug: "/shop/bracelets",
-                order: 5,
-                new: false,
-              },
-              {
-                title: "Joyas Corporales",
-                slug: "/shop/body-jewelry",
-                order: 6,
-                new: false,
-              },
-            ],
-          },
-          {
-            header: "Belleza",
-            categories: [
-              {
-                title: "Accesorios de Baño",
-                slug: "/shop/bath-accessories",
-                order: 1,
-                new: false,
-              },
-              {
-                title: "Maquillaje y Cosméticos",
-                slug: "/shop/makeup&cosmetics",
-                order: 2,
-                new: false,
-              },
-              {
-                title: "Cuidado de la Piel",
-                slug: "/shop/skin-care",
-                order: 3,
-                new: false,
-              },
-              {
-                title: "Cuidado del Cabello",
-                slug: "/shop/hair-care",
-                order: 4,
-                new: false,
-              },
-              {
-                title: "Aceites Esenciales",
-                slug: "/shop/essential-oils",
-                order: 5,
-                new: false,
-              },
-              {
-                title: "Fragancias",
-                slug: "/shop/fragrances",
-                order: 6,
-                new: false,
-              },
-              {
-                title: "Jabones y Bombas de Baño",
-                slug: "/shop/soaps&bath-bombs",
-                order: 7,
-                new: false,
-              },
-              {
-                title: "Mascarillas y Cubrebocas",
-                slug: "/shop/face-masks&coverings",
-                order: 8,
-                new: false,
-              },
-              {
-                title: "Kits de Spa y Regalos",
-                slug: "/shop/spa-kits&gifts",
-                order: 9,
-                new: false,
-              },
-            ],
-          },
-        ],
-      },
-      { title: "Hombres", slug: "/shop/man", order: 4, new: false },
-      { title: "Deportes", slug: "/shop/sport", order: 5, new: true },
-    ],
-  },
-  {
     lan: "HI",
     bar_data: [
       { title: "होम", slug: "/", order: 1, new: false },
@@ -665,6 +498,178 @@ export const headerNavbar = [
       },
       { title: "पुरुष", slug: "/shop/man", order: 4, new: false },
       { title: "खेल", slug: "/shop/sport", order: 5, new: true },
+    ],
+  },
+  {
+    lan: "TR",
+    bar_data: [
+      { title: "Ana Sayfa", slug: "/", order: 1, new: false },
+      { title: "Mağaza", slug: "/shop", order: 2, new: false },
+      {
+        title: "Kadın",
+        slug: "/shop/women",
+        order: 3,
+        new: false,
+        sub_cat: [
+          {
+            header: "Kadın Giyim",
+            categories: [
+              {
+                title: "Elbiseler",
+                slug: "/shop/dresses",
+                order: 1,
+                new: false,
+              },
+              {
+                title: "Üst Giysiler ve Tişörtler",
+                slug: "/shop/tops&tees",
+                order: 2,
+                new: false,
+              },
+              {
+                title: "Ceketler ve Montlar",
+                slug: "/shop/jackets&coats",
+                order: 3,
+                new: false,
+              },
+              {
+                title: "Pantolonlar ve Capri Pantolonlar",
+                slug: "/shop/pants&capris",
+                order: 4,
+                new: false,
+              },
+              {
+                title: "Kazaklar",
+                slug: "/shop/sweaters",
+                order: 5,
+                new: false,
+              },
+              {
+                title: "Kostümler",
+                slug: "/shop/costumes",
+                order: 6,
+                new: false,
+              },
+              {
+                title: "Kapüşonlu Sweatshirtler",
+                slug: "/shop/sweatshirts",
+                order: 7,
+                new: false,
+              },
+              {
+                title: "Pijama ve Bornozlar",
+                slug: "/shop/pajamas&robes",
+                order: 8,
+                new: false,
+              },
+              { title: "Şortlar", slug: "/shop/shorts", order: 9, new: false },
+              {
+                title: "Mayolar",
+                slug: "/shop/swimwear",
+                order: 10,
+                new: true,
+              },
+            ],
+          },
+          {
+            header: "Takı",
+            categories: [
+              {
+                title: "Aksesuarlar",
+                slug: "/shop/accessories",
+                order: 1,
+                new: false,
+              },
+              {
+                title: "Çantalar ve Cüzdanlar",
+                slug: "/shop/bags&purses",
+                order: 2,
+                new: false,
+              },
+              { title: "Yüzükler", slug: "/shop/rings", order: 3, new: false },
+              {
+                title: "Küpeler",
+                slug: "/shop/earrings",
+                order: 4,
+                new: false,
+              },
+              {
+                title: "Bilezikler",
+                slug: "/shop/bracelets",
+                order: 5,
+                new: false,
+              },
+              {
+                title: "Vücut Takıları",
+                slug: "/shop/body-jewelry",
+                order: 6,
+                new: false,
+              },
+            ],
+          },
+          {
+            header: "Güzellik",
+            categories: [
+              {
+                title: "Banyo Aksesuarları",
+                slug: "/shop/bath-accessories",
+                order: 1,
+                new: false,
+              },
+              {
+                title: "Makyaj ve Kozmetik Ürünler",
+                slug: "/shop/makeup&cosmetics",
+                order: 2,
+                new: false,
+              },
+              {
+                title: "Cilt Bakımı",
+                slug: "/shop/skin-care",
+                order: 3,
+                new: false,
+              },
+              {
+                title: "Saç Bakımı",
+                slug: "/shop/hair-care",
+                order: 4,
+                new: false,
+              },
+              {
+                title: "Eterik Yağlar",
+                slug: "/shop/essential-oils",
+                order: 5,
+                new: false,
+              },
+              {
+                title: "Parfümler",
+                slug: "/shop/fragrances",
+                order: 6,
+                new: false,
+              },
+              {
+                title: "Sabunlar ve Banyo Bombaları",
+                slug: "/shop/soaps&bath-bombs",
+                order: 7,
+                new: false,
+              },
+              {
+                title: "Yüz Maskeleri ve Kaplamaları",
+                slug: "/shop/face-masks&coverings",
+                order: 8,
+                new: false,
+              },
+              {
+                title: "Spa Kitleri ve Hediyeler",
+                slug: "/shop/spa-kits&gifts",
+                order: 9,
+                new: false,
+              },
+            ],
+          },
+        ],
+      },
+      { title: "Erkek", slug: "/shop/man", order: 4, new: false },
+      { title: "Spor", slug: "/shop/sport", order: 5, new: true },
     ],
   },
   {
@@ -984,82 +989,6 @@ export const headerBrands = [
     ],
   },
   {
-    lan: "ES",
-    brands: [
-      {
-        header: "Principales Marcas",
-        categories: [
-          {
-            title: "Nike",
-            slug: "/shop/nike",
-            order: 1,
-            new: false,
-          },
-          {
-            title: "Louis Vuitton",
-            slug: "/shop/louis-vuitton",
-            order: 2,
-            new: false,
-          },
-          {
-            title: "Hermes",
-            slug: "/shop/hermes",
-            order: 3,
-            new: false,
-          },
-          {
-            title: "Gucci",
-            slug: "/shop/gucci",
-            order: 4,
-            new: false,
-          },
-          {
-            title: "Zalando",
-            slug: "/shop/zalando",
-            order: 5,
-            new: false,
-          },
-          {
-            title: "Tiffany & Co.",
-            slug: "/shop/tiffany&co",
-            order: 6,
-            new: false,
-          },
-          {
-            title: "Zara",
-            slug: "/shop/zara",
-            order: 7,
-            new: false,
-          },
-          {
-            title: "H&M",
-            slug: "/shop/h&m",
-            order: 8,
-            new: false,
-          },
-          {
-            title: "Cartier",
-            slug: "/shop/cartier",
-            order: 9,
-            new: false,
-          },
-          {
-            title: "Chanel",
-            slug: "/shop/chanel",
-            order: 10,
-            new: false,
-          },
-          {
-            title: "Hurley",
-            slug: "/shop/hurley",
-            order: 11,
-            new: false,
-          },
-        ],
-      },
-    ],
-  },
-  {
     lan: "HI",
     brands: [
       {
@@ -1127,6 +1056,82 @@ export const headerBrands = [
           },
           {
             title: "हर्ली",
+            slug: "/shop/hurley",
+            order: 11,
+            new: false,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    lan: "TR",
+    brands: [
+      {
+        header: "En İyi Markalar",
+        categories: [
+          {
+            title: "Nike",
+            slug: "/shop/nike",
+            order: 1,
+            new: false,
+          },
+          {
+            title: "Louis Vuitton",
+            slug: "/shop/louis-vuitton",
+            order: 2,
+            new: false,
+          },
+          {
+            title: "Hermes",
+            slug: "/shop/hermes",
+            order: 3,
+            new: false,
+          },
+          {
+            title: "Gucci",
+            slug: "/shop/gucci",
+            order: 4,
+            new: false,
+          },
+          {
+            title: "Zalando",
+            slug: "/shop/zalando",
+            order: 5,
+            new: false,
+          },
+          {
+            title: "Tiffany & Co.",
+            slug: "/shop/tiffany&co",
+            order: 6,
+            new: false,
+          },
+          {
+            title: "Zara",
+            slug: "/shop/zara",
+            order: 7,
+            new: false,
+          },
+          {
+            title: "H&M",
+            slug: "/shop/h&m",
+            order: 8,
+            new: false,
+          },
+          {
+            title: "Cartier",
+            slug: "/shop/cartier",
+            order: 9,
+            new: false,
+          },
+          {
+            title: "Chanel",
+            slug: "/shop/chanel",
+            order: 10,
+            new: false,
+          },
+          {
+            title: "Hurley",
             slug: "/shop/hurley",
             order: 11,
             new: false,

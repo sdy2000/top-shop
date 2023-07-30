@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { ThemeButton } from "./components";
-import { currency } from "./data";
-import { onChangeCurrency } from "@/context/features";
+import { currency, language } from "./data";
+import { onChangeCurrency, onChangeLanguage } from "@/context/features";
 
 const TopHeader = () => {
   const dispatch = useDispatch();
   const currentCurrency = useSelector((store) => store.currency);
+  const currentLanguage = useSelector((store) => store.language);
 
   return (
     <div>
@@ -57,6 +58,9 @@ const TopHeader = () => {
                   <li>
                     <a href="#">Order Tracking</a>
                   </li>
+                  {/* //! //! */}
+                  {/* //!  Currency DropDown //!  */}
+                  {/* //! //! */}
                   <li>
                     <a href="#">
                       <div className="flex justify-center items-center gap-2 px-2 py-1">
@@ -79,7 +83,7 @@ const TopHeader = () => {
                             cur.id === currentCurrency.currency
                               ? "bg-slate-300"
                               : " hover:bg-slate-200"
-                          } current duration-200`}
+                          } duration-200`}
                           key={cur.id}
                         >
                           <button
@@ -96,6 +100,10 @@ const TopHeader = () => {
                       ))}
                     </ul>
                   </li>
+
+                  {/* //! //! */}
+                  {/* //!  Language DropDown //!  */}
+                  {/* //! //! */}
                   <li>
                     <a href="#">
                       English
@@ -104,18 +112,23 @@ const TopHeader = () => {
                       </span>
                     </a>
                     <ul>
-                      <li className="current">
-                        <a href="#">English</a>
-                      </li>
-                      <li>
-                        <a href="#">German</a>
-                      </li>
-                      <li>
-                        <a href="#">Spanish</a>
-                      </li>
-                      <li>
-                        <a href="#">Bahasa</a>
-                      </li>
+                      {language.map((lan, idx) => (
+                        <li
+                          className={`${
+                            lan.symbol === currentLanguage.symbol
+                              ? "bg-slate-300"
+                              : " hover:bg-slate-200"
+                          } duration-200 gap-2 px-2 py-1`}
+                          key={idx}
+                        >
+                          <button
+                            onClick={() => dispatch(onChangeLanguage(lan))}
+                            title={lan.title}
+                          >
+                            {lan.title}
+                          </button>
+                        </li>
+                      ))}
                     </ul>
                   </li>
                 </ul>

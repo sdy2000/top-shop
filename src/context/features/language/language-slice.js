@@ -18,10 +18,18 @@ const initialState = () => {
 const languageSlice = createSlice({
   name: "language",
   initialState,
-  reducers: {},
+  reducers: {
+    onChangeLanguage: (state, { payload }) => {
+      state.language = payload.title;
+      state.symbol = payload.symbol;
+      state.dir = payload.dir;
+
+      localStorage.setItem("language", JSON.stringify(state));
+    },
+  },
   extraReducers: (builder) => {},
 });
 
-// export const {} = languageSlice.actions;
+export const { onChangeLanguage } = languageSlice.actions;
 
 export default languageSlice.reducer;
