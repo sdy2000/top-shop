@@ -1,7 +1,17 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import Layout from "./layouts/layout";
+import { Layout, HomeLayout } from "@/layouts";
+
 function App() {
   return (
     <>
-      <div className="text-red-500 text-5xl">Hello World</div>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<HomeLayout />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
