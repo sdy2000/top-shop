@@ -7,6 +7,7 @@ const initialState = () => {
       JSON.stringify({
         currency: "USD",
         symbol: "$",
+        currency_name: "United States Dollar",
         currency_image:
           "https://s2.coinmarketcap.com/static/cloud/img/fiat-flags/USD.svg",
       })
@@ -19,10 +20,19 @@ const initialState = () => {
 const currencySlice = createSlice({
   name: "currency",
   initialState,
-  reducers: {},
+  reducers: {
+    onChangeCurrency: (state, { payload }) => {
+      state.currency = payload.id;
+      state.symbol = payload.symbol;
+      state.currency_name = payload.currency_name;
+      state.currency_image = payload.image;
+
+      localStorage.setItem("currency", JSON.stringify(state));
+    },
+  },
   extraReducers: (builder) => {},
 });
 
-// export const {} = currencySlice.actions;
+export const { onChangeCurrency } = currencySlice.actions;
 
 export default currencySlice.reducer;

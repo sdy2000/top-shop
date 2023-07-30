@@ -6,7 +6,6 @@ const ThemeButton = () => {
   const dispatch = useDispatch();
   const { theme } = useSelector((store) => store.theme);
 
-  console.log(theme);
   return (
     <button
       className="flex justify-center items-center text-2xl"
