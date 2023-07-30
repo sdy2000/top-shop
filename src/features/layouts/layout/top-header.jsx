@@ -338,7 +338,7 @@ const TopHeader = () => {
                     <li className="has-child fashion">
                       <a href="#">
                         <div className="icon-large"><i className="ri-t-shirt-air-line"></i></div>
-                        Women's Fashion
+                        Womens Fashion
                         <div className="icon-small"><i className="ri-arrow-right-s-line"></i></div>
                       </a>
                       <ul>
@@ -353,19 +353,19 @@ const TopHeader = () => {
                     <li>
                       <a href="#">
                         <div className="icon-large"><i className="ri-shirt-line"></i></div>
-                        Men's Fashion
+                        Mens Fashion
                       </a>
                     </li>
                     <li>
                       <a href="#">
                         <div className="icon-large"><i className="ri-user-5-line"></i></div>
-                        Girl's Fashion
+                        Girls Fashion
                       </a>
                     </li>
                     <li>
                       <a href="#">
                         <div className="icon-large"><i className="ri-user-6-line"></i></div>
-                        Boy's Fashion
+                        Boys Fashion
                       </a>
                     </li>
                     <li>
@@ -467,7 +467,7 @@ const TopHeader = () => {
               <div className="search-box">
                 <form action="" className="search">
                   <span className="icon-large"><i className="ri-search-line"></i></span>
-                  <input type="search" name="" id="" placeholder="Search for Products">
+                  <input type="search" name="" id="" placeholder="Search for Products" />
                     <button type="submit">Search</button>
                 </form>
               </div>
