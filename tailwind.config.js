@@ -12,6 +12,8 @@ export default {
         'light-text-color' : 'var(--light-text-color)',
         'border-color' : 'var(--border-color)',
         'dark-color' : 'var(--dark-color)'
+      //   light mode
+
       },
       fontSize : {
         sm : '13px',
