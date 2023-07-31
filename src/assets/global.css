@@ -385,10 +385,34 @@ form.search button:hover{
 .off-canvas .thetop-nav .right ul ul li a {
     @apply p-[0.5em] border-[1px] border-solid border-border-color leading-[16px] mt-0 mr-[0.5em] mb-[0.5em] ml-0;
 }
-
+/*
+    05. Footer
+        a. News Letter
+*/
+.newsletter {
+    padding: 2.5em 0;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+.newsletter h3 {
+    font-size: 1.5em;
+}
+.newsletter p {
+    font-weight: var(--fw3);
+    color: var(--border-color);
+    margin: 0.5em 0 1.5em 0;
+}
+.newsletter p strong {
+    color: var(--primary-color);
+}
+.newsletter form {
+    max-width: 500px;
+    width: var(--percent100);
+}
 .widgets {
     padding: 3.5em 2.5em;
     background-color: var(--light-bg-color);
+    @apply py-[3.5em] px-[2.5em]
 }
 
 /*
@@ -399,36 +423,25 @@ form.search button:hover{
     padding: 3.5em 0 5em 0;
 }
 .footer-info .wrapper .flexcol {
-    align-items: center;
-    gap: 0;
+    @apply items-center gap-0;
 }
 .footer-info ul li a {
-    font-size: 1.25em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: var(--light-bg-color);
-    border-radius: var(--percent50);
-    margin: 0.25em;
     transition: var(--trans-background);
+    @apply text-[1.25em] flex items-center justify-center w-[40px] h-[40px] bg-light-bg-color rounded-[50%] m-[0.25em];
 }
 .footer-info ul li a:hover {
-    background-color: var(--border-color);
+    @apply bg-border-color;
 }
 .footer-info .logo a {
     margin: 0 0 1em -0.75em;
 }
 .footer-info .mini-text {
-    margin-top: 2em;
-    text-align: center;
+    @apply mt-[2em] text-center;
 }
 
 .flexwrap .row {
     flex: 0 0 100%;
-    width: 100%;
-    margin-bottom: 2em;
+    @apply w-full mb-[2em];
 }
 @layer utilities {
 
