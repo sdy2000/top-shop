@@ -175,7 +175,7 @@
 /*
     Header
 */
-:where(.off-canvas, header) li > a {
+:where(.off-canvas, header, .header-part) li > a {
     line-height: inherit;
     transition: var(--trans-color);
     @apply flex relative;
