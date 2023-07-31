@@ -386,7 +386,50 @@ form.search button:hover{
     @apply p-[0.5em] border-[1px] border-solid border-border-color leading-[16px] mt-0 mr-[0.5em] mb-[0.5em] ml-0;
 }
 
+.widgets {
+    padding: 3.5em 2.5em;
+    background-color: var(--light-bg-color);
+}
 
+/*
+    05. Footer
+        C. Footer info
+*/
+.footer-info {
+    padding: 3.5em 0 5em 0;
+}
+.footer-info .wrapper .flexcol {
+    align-items: center;
+    gap: 0;
+}
+.footer-info ul li a {
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--light-bg-color);
+    border-radius: var(--percent50);
+    margin: 0.25em;
+    transition: var(--trans-background);
+}
+.footer-info ul li a:hover {
+    background-color: var(--border-color);
+}
+.footer-info .logo a {
+    margin: 0 0 1em -0.75em;
+}
+.footer-info .mini-text {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.flexwrap .row {
+    flex: 0 0 100%;
+    width: 100%;
+    margin-bottom: 2em;
+}
 @layer utilities {
 
 }
@@ -394,6 +437,14 @@ form.search button:hover{
 /*
     Responsive
 */
+@media screen and (min-width: 772px) {
+    .products.mini,
+    .banner .row,
+    .widgets .row
+    {
+        flex: 0 0 50%;
+    }
+}
 @media screen and (min-width: 992px) {
     .container {
         padding: 0 2em;
@@ -551,4 +602,15 @@ form.search button:hover{
     .dpt-menu .has-child:hover .mega {
         display: flex;
     }
+.widgets .row {
+    flex: 0 0 25%;
+}
+/*    Department */
+
+    .newsletter .box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+/*    Footer*/
 }
