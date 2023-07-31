@@ -1,5 +1,5 @@
 const Header = () => {
-  return <div>
+  return <header>
     <div className="header-nav">
       <div className="container">
         <div className="wrapper flexitem">
@@ -240,6 +240,6 @@ const Header = () => {
         </div>
       </div>
     </div>
-  </div>;
+  </header>;
 };
 export default Header;
