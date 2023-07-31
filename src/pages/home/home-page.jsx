@@ -1,6 +1,6 @@
 const HomePage = () => {
   return (
-    <div className="">
+    <div className="header-part">
       <div className="header-main mobile-hide">
         <div className="container">
           <div className="wrapper flexitem">
