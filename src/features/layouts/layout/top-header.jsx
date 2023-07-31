@@ -1,17 +1,13 @@
-import { useDispatch, useSelector } from "react-redux";
-import { ThemeButton } from "./components";
-import { barDiffLanguage, currency, language } from "./data";
-import { onChangeCurrency, onChangeLanguage } from "@/context/features";
+import { useSelector } from "react-redux";
+import { CurrencyDropdown, LanguageDropdown, ThemeButton } from "./components";
+import { barDiffLanguage } from "./data";
 
 const TopHeader = () => {
-  const dispatch = useDispatch();
-  const currentCurrency = useSelector((store) => store.currency);
   const currentLanguage = useSelector((store) => store.language);
   const { data } = barDiffLanguage.find(
     (bar) => bar.lan === currentLanguage.symbol
   );
 
-  console.log(data);
   return (
     <div>
       <aside className="site-off desktop-hide">
@@ -66,74 +62,14 @@ const TopHeader = () => {
                   {/* //!  Currency DropDown //!  */}
                   {/* //! //! */}
                   <li>
-                    <a href="#">
-                      <div className="flex justify-center items-center gap-2 px-2 py-1">
-                        <span className="h-4 w-4">
-                          <img
-                            src={currentCurrency.currency_image}
-                            alt={currentCurrency.currency_name}
-                          />
-                        </span>
-                        <span>{currentCurrency.currency}</span>
-                      </div>
-                      <span className="icon-small">
-                        <i className="ri-arrow-down-s-line"></i>
-                      </span>
-                    </a>
-                    <ul>
-                      {currency.map((cur) => (
-                        <li
-                          className={`${
-                            cur.id === currentCurrency.currency
-                              ? "bg-slate-300"
-                              : " hover:bg-slate-200"
-                          } duration-200`}
-                          key={cur.id}
-                        >
-                          <button
-                            title={cur.currency_name}
-                            className="flex justify-center items-center gap-2 px-2 py-1"
-                            onClick={() => dispatch(onChangeCurrency(cur))}
-                          >
-                            <span className="h-4 w-4">
-                              <img src={cur.image} alt={cur.currency_name} />
-                            </span>
-                            <span>{cur.id}</span>
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
+                    <CurrencyDropdown />
                   </li>
 
                   {/* //! //! */}
                   {/* //!  Language DropDown //!  */}
                   {/* //! //! */}
                   <li>
-                    <a href="#">
-                      {currentLanguage.language}
-                      <span className="icon-small">
-                        <i className="ri-arrow-down-s-line"></i>
-                      </span>
-                    </a>
-                    <ul>
-                      {language.map((lan, idx) => (
-                        <li
-                          className={`${
-                            lan.symbol === currentLanguage.symbol
-                              ? "bg-slate-300"
-                              : " hover:bg-slate-200"
-                          } duration-200 gap-2 px-2 py-1`}
-                          key={idx}
-                        >
-                          <button
-                            onClick={() => dispatch(onChangeLanguage(lan))}
-                            title={lan.title}
-                          >
-                            {lan.title}
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
+                    <LanguageDropdown />
                   </li>
                 </ul>
               </div>
