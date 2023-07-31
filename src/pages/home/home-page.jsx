@@ -325,19 +325,22 @@ const HomePage = () => {
             <div className="right">
               <div className="search-box">
                 <form action="" className="search">
-                    <span className="icon-large">
-                      <i className="ri-search-line"></i>
-                    </span>
+                  <span className="icon-large">
+                    <i className="ri-search-line"></i>
+                  </span>
                   <input
-                      type="search"
-                      name=""
-                      id=""
-                      placeholder="Search for Products"
+                    type="search"
+                    name=""
+                    id=""
+                    placeholder="Search for Products"
                   />
                   <button type="submit">Search</button>
                 </form>
               </div>
             </div>
+          </div>
+          <div className="py-56 font-fw7 text-5xl bg-red-200 bg-opacity-40 ml-80 mt-10 rounded-2xl p-10">
+            Some Content
           </div>
         </div>
       </div>
