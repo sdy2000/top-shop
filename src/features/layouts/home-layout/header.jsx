@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div>
+    <div className="header-part">
       <div className="header-nav">
         <div className="container">
           <div className="wrapper flexitem">
