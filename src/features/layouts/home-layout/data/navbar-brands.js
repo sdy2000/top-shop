@@ -1,374 +1,145 @@
-const navbarBrands = [
-  {
-    lan: "EN",
-    brands: {
-      header: "Top Brands",
-      categories: [
-        {
-          title: "Nike",
-          slug: "/shop/nike",
-          order: 1,
-          new: false,
-        },
-        {
-          title: "Louis Vuitton",
-          slug: "/shop/louis-vuitton",
-          order: 2,
-          new: false,
-        },
-        {
-          title: "Hermes",
-          slug: "/shop/hermes",
-          order: 3,
-          new: false,
-        },
-        {
-          title: "Gucci",
-          slug: "/shop/gucci",
-          order: 4,
-          new: false,
-        },
-        {
-          title: "Zalando",
-          slug: "/shop/zalando",
-          order: 5,
-          new: false,
-        },
-        {
-          title: "Tiffany & Co.",
-          slug: "/shop/tiffany&co",
-          order: 6,
-          new: false,
-        },
-        {
-          title: "Zara",
-          slug: "/shop/zara",
-          order: 7,
-          new: false,
-        },
-        {
-          title: "H&M",
-          slug: "/shop/h&m",
-          order: 8,
-          new: false,
-        },
-        {
-          title: "Cartier",
-          slug: "/shop/cartier",
-          order: 9,
-          new: false,
-        },
-        {
-          title: "Chanel",
-          slug: "/shop/chanel",
-          order: 10,
-          new: false,
-        },
-        {
-          title: "Hurley",
-          slug: "/shop/hurley",
-          order: 11,
-          new: false,
-        },
+const navbarBrands = {
+  header: [
+    { lan: "EN", text: "Top Brands" },
+    { lan: "DE", text: "Top-Marken" },
+    { lan: "HI", text: "शीर्ष ब्रांड्स" },
+    { lan: "TR", text: "En İyi Markalar" },
+    { lan: "FA", text: "برندهای برتر" },
+  ],
+  categories: [
+    {
+      title: [
+        { lan: "EN", text: "Nike" },
+        { lan: "DE", text: "Nike" },
+        { lan: "HI", text: "नाइक" },
+        { lan: "TR", text: "Nike" },
+        { lan: "FA", text: "نایکی" },
       ],
+      slug: "/shop/nike",
+      order: 1,
+      new: false,
     },
-  },
-  {
-    lan: "DE",
-    brands: {
-      header: "Top-Marken",
-      categories: [
-        {
-          title: "Nike",
-          slug: "/shop/nike",
-          order: 1,
-          new: false,
-        },
-        {
-          title: "Louis Vuitton",
-          slug: "/shop/louis-vuitton",
-          order: 2,
-          new: false,
-        },
-        {
-          title: "Hermes",
-          slug: "/shop/hermes",
-          order: 3,
-          new: false,
-        },
-        {
-          title: "Gucci",
-          slug: "/shop/gucci",
-          order: 4,
-          new: false,
-        },
-        {
-          title: "Zalando",
-          slug: "/shop/zalando",
-          order: 5,
-          new: false,
-        },
-        {
-          title: "Tiffany & Co.",
-          slug: "/shop/tiffany&co",
-          order: 6,
-          new: false,
-        },
-        {
-          title: "Zara",
-          slug: "/shop/zara",
-          order: 7,
-          new: false,
-        },
-        {
-          title: "H&M",
-          slug: "/shop/h&m",
-          order: 8,
-          new: false,
-        },
-        {
-          title: "Cartier",
-          slug: "/shop/cartier",
-          order: 9,
-          new: false,
-        },
-        {
-          title: "Chanel",
-          slug: "/shop/chanel",
-          order: 10,
-          new: false,
-        },
-        {
-          title: "Hurley",
-          slug: "/shop/hurley",
-          order: 11,
-          new: false,
-        },
+    {
+      title: [
+        { lan: "EN", text: "Louis Vuitton" },
+        { lan: "DE", text: "Louis Vuitton" },
+        { lan: "HI", text: "लुई विटन" },
+        { lan: "TR", text: "Louis Vuitton" },
+        { lan: "FA", text: "لوئی ویتون" },
       ],
+      slug: "/shop/louis-vuitton",
+      order: 2,
+      new: false,
     },
-  },
-  {
-    lan: "HI",
-    brands: {
-      header: "शीर्ष ब्रांड",
-      categories: [
-        {
-          title: "नाइक",
-          slug: "/shop/nike",
-          order: 1,
-          new: false,
-        },
-        {
-          title: "लुई विटन",
-          slug: "/shop/louis-vuitton",
-          order: 2,
-          new: false,
-        },
-        {
-          title: "हर्मेस",
-          slug: "/shop/hermes",
-          order: 3,
-          new: false,
-        },
-        {
-          title: "गुची",
-          slug: "/shop/gucci",
-          order: 4,
-          new: false,
-        },
-        {
-          title: "ज़ालंडो",
-          slug: "/shop/zalando",
-          order: 5,
-          new: false,
-        },
-        {
-          title: "टिफ़नी एंड को",
-          slug: "/shop/tiffany&co",
-          order: 6,
-          new: false,
-        },
-        {
-          title: "ज़ारा",
-          slug: "/shop/zara",
-          order: 7,
-          new: false,
-        },
-        {
-          title: "एच एंड एम",
-          slug: "/shop/h&m",
-          order: 8,
-          new: false,
-        },
-        {
-          title: "कार्टियर",
-          slug: "/shop/cartier",
-          order: 9,
-          new: false,
-        },
-        {
-          title: "चैनल",
-          slug: "/shop/chanel",
-          order: 10,
-          new: false,
-        },
-        {
-          title: "हर्ली",
-          slug: "/shop/hurley",
-          order: 11,
-          new: false,
-        },
+    {
+      title: [
+        { lan: "EN", text: "Hermes" },
+        { lan: "DE", text: "Hermes" },
+        { lan: "HI", text: "हर्मीज़" },
+        { lan: "TR", text: "Hermes" },
+        { lan: "FA", text: "هرمس" },
       ],
+      slug: "/shop/hermes",
+      order: 3,
+      new: false,
     },
-  },
-  {
-    lan: "TR",
-    brands: {
-      header: "En İyi Markalar",
-      categories: [
-        {
-          title: "Nike",
-          slug: "/shop/nike",
-          order: 1,
-          new: false,
-        },
-        {
-          title: "Louis Vuitton",
-          slug: "/shop/louis-vuitton",
-          order: 2,
-          new: false,
-        },
-        {
-          title: "Hermes",
-          slug: "/shop/hermes",
-          order: 3,
-          new: false,
-        },
-        {
-          title: "Gucci",
-          slug: "/shop/gucci",
-          order: 4,
-          new: false,
-        },
-        {
-          title: "Zalando",
-          slug: "/shop/zalando",
-          order: 5,
-          new: false,
-        },
-        {
-          title: "Tiffany & Co.",
-          slug: "/shop/tiffany&co",
-          order: 6,
-          new: false,
-        },
-        {
-          title: "Zara",
-          slug: "/shop/zara",
-          order: 7,
-          new: false,
-        },
-        {
-          title: "H&M",
-          slug: "/shop/h&m",
-          order: 8,
-          new: false,
-        },
-        {
-          title: "Cartier",
-          slug: "/shop/cartier",
-          order: 9,
-          new: false,
-        },
-        {
-          title: "Chanel",
-          slug: "/shop/chanel",
-          order: 10,
-          new: false,
-        },
-        {
-          title: "Hurley",
-          slug: "/shop/hurley",
-          order: 11,
-          new: false,
-        },
+    {
+      title: [
+        { lan: "EN", text: "Gucci" },
+        { lan: "DE", text: "Gucci" },
+        { lan: "HI", text: "गुच्ची" },
+        { lan: "TR", text: "Gucci" },
+        { lan: "FA", text: "گوچی" },
       ],
+      slug: "/shop/gucci",
+      order: 4,
+      new: false,
     },
-  },
-  {
-    lan: "FA",
-    brands: {
-      header: "برندهای معتبر",
-      categories: [
-        {
-          title: "نایک",
-          slug: "/shop/nike",
-          order: 1,
-          new: false,
-        },
-        {
-          title: "لوئی ویتون",
-          slug: "/shop/louis-vuitton",
-          order: 2,
-          new: false,
-        },
-        {
-          title: "هرمس",
-          slug: "/shop/hermes",
-          order: 3,
-          new: false,
-        },
-        {
-          title: "گوچی",
-          slug: "/shop/gucci",
-          order: 4,
-          new: false,
-        },
-        {
-          title: "زالاندو",
-          slug: "/shop/zalando",
-          order: 5,
-          new: false,
-        },
-        {
-          title: "تیفانی و کو",
-          slug: "/shop/tiffany&co",
-          order: 6,
-          new: false,
-        },
-        {
-          title: "زارا",
-          slug: "/shop/zara",
-          order: 7,
-          new: false,
-        },
-        {
-          title: "اچ اند ام",
-          slug: "/shop/h&m",
-          order: 8,
-          new: false,
-        },
-        {
-          title: "کارتیر",
-          slug: "/shop/cartier",
-          order: 9,
-          new: false,
-        },
-        {
-          title: "شانل",
-          slug: "/shop/chanel",
-          order: 10,
-          new: false,
-        },
-        {
-          title: "هورلی",
-          slug: "/shop/hurley",
-          order: 11,
-          new: false,
-        },
+    {
+      title: [
+        { lan: "EN", text: "Zalando" },
+        { lan: "DE", text: "Zalando" },
+        { lan: "HI", text: "जलंदो" },
+        { lan: "TR", text: "Zalando" },
+        { lan: "FA", text: "زالاندو" },
       ],
+      slug: "/shop/zalando",
+      order: 5,
+      new: false,
     },
-  },
-];
+    {
+      title: [
+        { lan: "EN", text: "Tiffany & Co." },
+        { lan: "DE", text: "Tiffany & Co." },
+        { lan: "HI", text: "टिफ़नी एंड कंपनी" },
+        { lan: "TR", text: "Tiffany & Co." },
+        { lan: "FA", text: "تیفانی و شرکا" },
+      ],
+      slug: "/shop/tiffany&co",
+      order: 6,
+      new: false,
+    },
+    {
+      title: [
+        { lan: "EN", text: "Zara" },
+        { lan: "DE", text: "Zara" },
+        { lan: "HI", text: "ज़ारा" },
+        { lan: "TR", text: "Zara" },
+        { lan: "FA", text: "زارا" },
+      ],
+      slug: "/shop/zara",
+      order: 7,
+      new: false,
+    },
+    {
+      title: [
+        { lan: "EN", text: "H&M" },
+        { lan: "DE", text: "H&M" },
+        { lan: "HI", text: "एच एंड एम" },
+        { lan: "TR", text: "H&M" },
+        { lan: "FA", text: "های اند م" },
+      ],
+      slug: "/shop/h&m",
+      order: 8,
+      new: false,
+    },
+    {
+      title: [
+        { lan: "EN", text: "Cartier" },
+        { lan: "DE", text: "Cartier" },
+        { lan: "HI", text: "कार्तिये" },
+        { lan: "TR", text: "Cartier" },
+        { lan: "FA", text: "کارتیر" },
+      ],
+      slug: "/shop/cartier",
+      order: 9,
+      new: false,
+    },
+    {
+      title: [
+        { lan: "EN", text: "Chanel" },
+        { lan: "DE", text: "Chanel" },
+        { lan: "HI", text: "चैनल" },
+        { lan: "TR", text: "Chanel" },
+        { lan: "FA", text: "شانل" },
+      ],
+      slug: "/shop/chanel",
+      order: 10,
+      new: false,
+    },
+    {
+      title: [
+        { lan: "EN", text: "Hurley" },
+        { lan: "DE", text: "Hurley" },
+        { lan: "HI", text: "हर्ली" },
+        { lan: "TR", text: "Hurley" },
+        { lan: "FA", text: "هورلی" },
+      ],
+      slug: "/shop/hurley",
+      order: 11,
+      new: false,
+    },
+  ],
+};
 
 export default navbarBrands;

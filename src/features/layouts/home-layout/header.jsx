@@ -4,12 +4,6 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const currentLanguage = useSelector((store) => store.language);
-  const { bar_data } = headerNavbar.find(
-    (bar) => bar.lan === currentLanguage.symbol
-  );
-  const { brands } = navbarBrands.find(
-    (bar) => bar.lan === currentLanguage.symbol
-  );
   const { data } = headerDiffLanguage.find(
     (data) => data.lan === currentLanguage.symbol
   );
@@ -31,100 +25,134 @@ const Header = () => {
               </div>
               <nav className="mobile-hide">
                 <ul className="flexitem second-links">
-                  {bar_data.map((navbar, idx) => (
-                    <li key={idx} className={navbar.sub_cat && "has-child"}>
-                      <Link title={navbar.title} to={navbar.slug}>
-                        {navbar.title}
+                  {headerNavbar.map((navbar, idx) => {
+                    let title = navbar.title.find(
+                      (t) => t.lan === currentLanguage.symbol
+                    ).text;
+                    return (
+                      <li key={idx} className={navbar.sub_cat && "has-child"}>
+                        <Link title={title} to={navbar.slug}>
+                          {title}
+                          {navbar.sub_cat && (
+                            <div className="icon-small">
+                              <i className="ri-arrow-down-s-line"></i>
+                            </div>
+                          )}
+                          {navbar.new && (
+                            <div className="fly-item">
+                              <span>{data.new}</span>
+                            </div>
+                          )}
+                        </Link>
                         {navbar.sub_cat && (
-                          <div className="icon-small">
-                            <i className="ri-arrow-down-s-line"></i>
-                          </div>
-                        )}
-                        {navbar.new && (
-                          <div className="fly-item">
-                            <span>{data.new}</span>
-                          </div>
-                        )}
-                      </Link>
-                      {navbar.sub_cat && (
-                        <div className="mega">
-                          <div className="container">
-                            <div className="wrapper">
-                              {navbar.sub_cat.map((sub, idx2) => (
-                                <div className="flexcol" key={idx2}>
-                                  <div className="row">
-                                    <h4>{sub.header}</h4>
+                          <div className="mega">
+                            <div className="container">
+                              <div className="wrapper">
+                                {navbar.sub_cat.map((sub, idx2) => {
+                                  let header = sub.header.find(
+                                    (t) => t.lan === currentLanguage.symbol
+                                  ).text;
+                                  return (
+                                    <div className="flexcol" key={idx2}>
+                                      <div className="row">
+                                        <h4>{header}</h4>
 
-                                    <ul>
-                                      {sub.categories.map((cat, idx3) => (
-                                        <li key={idx3}>
-                                          <Link title={cat.title} to={cat.slug}>
-                                            {cat.title}
-                                            {cat.new && (
-                                              <div className="fly-item">
-                                                <span>{data.new}</span>
-                                              </div>
-                                            )}
-                                          </Link>
-                                        </li>
-                                      ))}
+                                        <ul>
+                                          {sub.categories.map((cat, idx3) => {
+                                            let title = cat.title.find(
+                                              (t) =>
+                                                t.lan === currentLanguage.symbol
+                                            ).text;
+                                            return (
+                                              <li key={idx3}>
+                                                <Link
+                                                  title={title}
+                                                  to={cat.slug}
+                                                >
+                                                  {title}
+                                                  {cat.new && (
+                                                    <div className="fly-item">
+                                                      <span>{data.new}</span>
+                                                    </div>
+                                                  )}
+                                                </Link>
+                                              </li>
+                                            );
+                                          })}
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  );
+                                })}
+
+                                <div className="flexcol">
+                                  <div className="row">
+                                    <h4>
+                                      {
+                                        navbarBrands.header.find(
+                                          (t) =>
+                                            t.lan === currentLanguage.symbol
+                                        ).text
+                                      }
+                                    </h4>
+                                    <ul className="women-brands">
+                                      {navbarBrands.categories.map(
+                                        (cat, idx) => {
+                                          let title = cat.title.find(
+                                            (t) =>
+                                              t.lan === currentLanguage.symbol
+                                          ).text;
+                                          return (
+                                            <li key={idx}>
+                                              <Link title={title} to={cat.slug}>
+                                                {title}
+                                                {cat.new && (
+                                                  <div className="fly-item">
+                                                    <span>{data.new}!</span>
+                                                  </div>
+                                                )}
+                                              </Link>
+                                            </li>
+                                          );
+                                        }
+                                      )}
                                     </ul>
+                                    <Link
+                                      to="/shop/all-brands"
+                                      className="view-all"
+                                    >
+                                      {data.view}{" "}
+                                      <i className="ri-arrow-right-line"></i>
+                                    </Link>
                                   </div>
                                 </div>
-                              ))}
-
-                              <div className="flexcol">
-                                <div className="row">
-                                  <h4>{brands.header}</h4>
-                                  <ul className="women-brands">
-                                    {brands.categories.map((cat, idx) => (
-                                      <li key={idx}>
-                                        <Link title={cat.title} to={cat.slug}>
-                                          {cat.title}
-                                          {cat.new && (
-                                            <div className="fly-item">
-                                              <span>{data.new}!</span>
-                                            </div>
-                                          )}
-                                        </Link>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                  <Link
-                                    to="/shop/all-brands"
-                                    className="view-all"
-                                  >
-                                    {data.view}{" "}
-                                    <i className="ri-arrow-right-line"></i>
-                                  </Link>
-                                </div>
-                              </div>
-                              <div className="flexcol products">
-                                <div className="row">
-                                  <div className="media">
-                                    <div className="thumbnail object-cover">
-                                      <a href="#">
-                                        <img
-                                          src="./assets/products/apparel4.jpg"
-                                          alt=""
-                                        />
+                                <div className="flexcol products">
+                                  <div className="row">
+                                    <div className="media">
+                                      <div className="thumbnail object-cover">
+                                        <a href="#">
+                                          <img
+                                            src="./assets/products/apparel4.jpg"
+                                            alt=""
+                                          />
+                                        </a>
+                                      </div>
+                                    </div>
+                                    <div className="text-content">
+                                      <h4>{data.most_wanted}!</h4>
+                                      <a href="#" className="primary-button">
+                                        {data.order}
                                       </a>
                                     </div>
-                                  </div>
-                                  <div className="text-content">
-                                    <h4>{data.most_wanted}!</h4>
-                                    <a href="#" className="primary-button">
-                                      {data.order}
-                                    </a>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      )}
-                    </li>
-                  ))}
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               </nav>
             </div>
