@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { headerNavbar, navbarBrands } from "./data";
+import { headerDiffLanguage, headerNavbar, navbarBrands } from "./data";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -9,6 +9,9 @@ const Header = () => {
   );
   const { brands } = navbarBrands.find(
     (bar) => bar.lan === currentLanguage.symbol
+  );
+  const { data } = headerDiffLanguage.find(
+    (data) => data.lan === currentLanguage.symbol
   );
 
   return (
@@ -22,7 +25,8 @@ const Header = () => {
             <div className="left flexitem">
               <div className="logo">
                 <a href="#">
-                  <span className="circle"></span>.Store
+                  <span className="circle"></span>
+                  <span className="text-secondary-color z-10">TOP</span>Shop
                 </a>
               </div>
               <nav className="mobile-hide">
@@ -38,7 +42,7 @@ const Header = () => {
                         )}
                         {navbar.new && (
                           <div className="fly-item">
-                            <span>New!</span>
+                            <span>{data.new}</span>
                           </div>
                         )}
                       </Link>
@@ -58,7 +62,7 @@ const Header = () => {
                                             {cat.title}
                                             {cat.new && (
                                               <div className="fly-item">
-                                                <span>New!</span>
+                                                <span>{data.new}</span>
                                               </div>
                                             )}
                                           </Link>
@@ -79,7 +83,7 @@ const Header = () => {
                                           {cat.title}
                                           {cat.new && (
                                             <div className="fly-item">
-                                              <span>New!</span>
+                                              <span>{data.new}!</span>
                                             </div>
                                           )}
                                         </Link>
@@ -90,7 +94,7 @@ const Header = () => {
                                     to="/shop/all-brands"
                                     className="view-all"
                                   >
-                                    View all brands{" "}
+                                    {data.view}{" "}
                                     <i className="ri-arrow-right-line"></i>
                                   </Link>
                                 </div>
@@ -108,9 +112,9 @@ const Header = () => {
                                     </div>
                                   </div>
                                   <div className="text-content">
-                                    <h4>Most Wanted!</h4>
+                                    <h4>{data.most_wanted}!</h4>
                                     <a href="#" className="primary-button">
-                                      Order Now
+                                      {data.order}
                                     </a>
                                   </div>
                                 </div>
@@ -143,7 +147,7 @@ const Header = () => {
                       </div>
                     </div>
                     <div className="icon-text">
-                      <div className="mini-text">Total</div>
+                      <div className="mini-text">{data.total}</div>
                       <div className="cart-total">$0.00</div>
                     </div>
                   </a>

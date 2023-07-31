@@ -15,7 +15,8 @@ const TopHeader = () => {
           <div className="canvas-head flexitem">
             <div className="logo">
               <a href="/">
-                <span className="circle"></span>.Store
+                <span className="circle"></span>
+                <span className="text-secondary-color z-10">TOP</span>Shop
               </a>
             </div>
             <a href="#" className="t-close flexcenter">
