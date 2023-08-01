@@ -1,88 +1,59 @@
+import { useSelector } from "react-redux";
+import { homeSliderDiffLanguage } from "../data/home-slider-diff-language";
+import { SliderCard } from ".";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// import required modules
+import {
+  Autoplay,
+  Navigation,
+  Pagination,
+  Mousewheel,
+  Keyboard,
+} from "swiper/modules";
+
 const HomeSlider = () => {
+  const currentLanguage = useSelector((store) => store.language);
+  const { data } = homeSliderDiffLanguage.find(
+    (slider) => slider.lan === currentLanguage.symbol
+  );
+
   return (
-    <div className="slider">
-      <div className="container">
-        <div className="wrapper">
-          <div className="myslider swiper">
-            <div className="swiper-wrapper">
-              <div className="swiper-slide">
-                <div className="item">
-                  <div className="image object-cover">
-                    <img src="./assets/slider/slider0.jpg" alt="" />
-                  </div>
-                  <div className="text-content flexcol">
-                    <h4>Shoes Fashion</h4>
-                    <h2>
-                      <span>Come and Get it!</span>
-                      <br />
-                      <span>Brand New Shoes</span>
-                    </h2>
-                    <a href="#" className="primary-button">
-                      Shop Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="swiper-slide">
-                <div className="item">
-                  <div className="image object-cover">
-                    <img src="./assets/slider/slider1.jpg" alt="" />
-                  </div>
-                  <div className="text-content flexcol">
-                    <h4>Quick Fashion</h4>
-                    <h2>
-                      <span>Fit Your Wardrobe</span>
-                      <br />
-                      <span>with luxury items</span>
-                    </h2>
-                    <a href="#" className="primary-button">
-                      Shop Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="swiper-slide">
-                <div className="item">
-                  <div className="image object-cover">
-                    <img src="./assets/slider/slider2.jpg" alt="" />
-                  </div>
-                  <div className="text-content flexcol">
-                    <h4>Quick Offer</h4>
-                    <h2>
-                      <span>Wooden Minimal Sofa</span>
-                      <br />
-                      <span>extra 50% off</span>
-                    </h2>
-                    <a href="#" className="primary-button">
-                      Shop Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="swiper-slide">
-                <div className="item">
-                  <div className="image object-cover">
-                    <img src="./assets/slider/slider3.jpg" alt="" />
-                  </div>
-                  <div className="text-content flexcol">
-                    <h4>Best Deals</h4>
-                    <h2>
-                      <span>Home Workout Accessories</span>
-                      <br />
-                      <span>Push the limit</span>
-                    </h2>
-                    <a href="#" className="primary-button">
-                      Shop Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="swiper-pagination"></div>
+    <>
+      <div className="slider">
+        <div className="container">
+          <div className="wrapper">
+            <Swiper
+              spaceBetween={30}
+              centeredSlides={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              cssMode={true}
+              navigation={true}
+              pagination={true}
+              mousewheel={true}
+              keyboard={true}
+              modules={[Autoplay, Navigation, Pagination, Mousewheel, Keyboard]}
+              className="mySwiper"
+            >
+              {data.map((slider, idx) => (
+                <SwiperSlide key={idx}>
+                  <SliderCard {...slider} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
