@@ -684,7 +684,7 @@ form.search button:hover {
   }
   /*    Department */
   .slider > div > .wrapper {
-    width: calc(100% - (300px + 2em));
+    width: calc(100% - (370px + 3em));
     margin-left: auto;
   }
 
