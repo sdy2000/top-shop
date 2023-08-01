@@ -21,6 +21,8 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          {/* //! */}
+          {/* //! Main Layout //! */}
           <Route element={<Layout />}>
             {/* //! */}
             {/* //! */}
@@ -31,6 +33,7 @@ function App() {
             {/* //! */}
             {/* //! */}
           </Route>
+          {/* //! */}
         </Routes>
       </BrowserRouter>
     </>
