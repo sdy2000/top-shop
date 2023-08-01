@@ -415,7 +415,8 @@ form.search button:hover {
   opacity: .8;
 }
 .slider .text-content {
-  position: relative;
+  top: 0;
+  position: absolute;
   height: var(--percent100);
   justify-content: flex-end;
   padding: 0 0 10% 10%;
