@@ -380,11 +380,11 @@ form.search button:hover {
 .off-canvas .has-child {
   width: var(--percent100);
 }
-.off-canvas
-  .thetop-nav
-  .right
-  > ul
-  > :where(:nth-child(4), li:nth-child(5))
+.off-canvas,
+  .thetop-nav,
+  .right,
+  > ul,
+  > :where(:nth-child(4), li:nth-child(5)),
   > a {
   display: none;
 }
@@ -394,6 +394,57 @@ form.search button:hover {
 .off-canvas .thetop-nav .right ul ul li a {
   @apply p-[0.5em] border-[1px] border-solid border-border-color leading-[16px] mt-0 mr-[0.5em] mb-[0.5em] ml-0;
 }
+
+/*
+  Slider
+*/
+.slider .item {
+  position: relative;
+  height: 474px;
+}
+.slider .item::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 450px;
+  height: 300px;
+  background-color: var(--white-color);
+  z-index: 1;
+  filter: blur(50px);
+  opacity: .8;
+}
+.slider .text-content {
+  position: relative;
+  height: var(--percent100);
+  justify-content: flex-end;
+  padding: 0 0 10% 10%;
+  z-index: 1;
+}
+.slider h4 {
+  font-size: var(--font-small);
+  font-weight: var(--fw7);
+  width: fit-content;
+  padding: 4px 10px;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  border-radius: 4px;
+}
+.text-content :where(h2,h3) span:first-child {
+  font-weight: var(--fw3);
+  color: var(--light-text-color);
+}
+.text-content :where(h2,h3) span:last-child {
+  color: var(--secondary-dark-color);
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--secondary-dark-color);
+}
+
+/*      */
+
 /*
     05. Footer
         a. News Letter
@@ -631,6 +682,14 @@ form.search button:hover {
     flex: 0 0 25%;
   }
   /*    Department */
+  .slider > div > .wrapper {
+    width: calc(100% - (300px + 2em));
+    margin-left: auto;
+  }
+
+  /*Slider*/
+
+
 
   .newsletter .box {
     display: flex;
