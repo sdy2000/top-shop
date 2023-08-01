@@ -4,23 +4,15 @@ import { Layout, HomeLayout } from "@/layouts";
 import { HomePage } from "@/pages/home";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
+import { changeTheme } from "@/hooks";
 
 function App() {
-  //TODO : Create Hook for this method
   //#region Theme Changer
 
   const { theme } = useSelector((store) => store.theme);
 
-  const checkTheme = (existing) => {
-    const root = window.document.documentElement;
-    const isDark = existing === "dark";
-
-    root.classList.remove(isDark ? "light" : "dark");
-    root.classList.add(existing);
-  };
-
   useEffect(() => {
-    checkTheme(theme);
+    changeTheme(theme);
   }, [theme]);
 
   //#endregion
