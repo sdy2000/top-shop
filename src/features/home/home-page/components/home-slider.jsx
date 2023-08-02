@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import { homeSliderDiffLanguage } from "../data/home-slider-diff-language";
 import { SliderCard } from ".";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,6 +16,7 @@ import {
   Mousewheel,
   Keyboard,
 } from "swiper/modules";
+import { homeSliderDiffLanguage } from "../data";
 
 const HomeSlider = () => {
   const currentLanguage = useSelector((store) => store.language);

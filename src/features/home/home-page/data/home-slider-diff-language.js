@@ -1,4 +1,4 @@
-export const homeSliderDiffLanguage = [
+const homeSliderDiffLanguage = [
   {
     lan: "EN",
     dir: "ltr",
@@ -190,3 +190,5 @@ export const homeSliderDiffLanguage = [
     ],
   },
 ];
+
+export default homeSliderDiffLanguage;

@@ -381,11 +381,11 @@ form.search button:hover {
   width: var(--percent100);
 }
 .off-canvas,
-  .thetop-nav,
-  .right,
-  > ul,
-  > :where(:nth-child(4), li:nth-child(5)),
-  > a {
+.thetop-nav,
+.right,
+> ul,
+> :where(:nth-child(4), li:nth-child(5)),
+> a {
   display: none;
 }
 .off-canvas .thetop-nav .right ul ul {
@@ -403,7 +403,7 @@ form.search button:hover {
   height: 474px;
 }
 .slider .item::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 30%;
   left: 0;
@@ -412,7 +412,7 @@ form.search button:hover {
   background-color: var(--white-color);
   z-index: 1;
   filter: blur(50px);
-  opacity: .8;
+  opacity: 0.8;
 }
 .slider .text-content {
   top: 0;
@@ -431,11 +431,11 @@ form.search button:hover {
   color: var(--white-color);
   border-radius: 4px;
 }
-.text-content :where(h2,h3) span:first-child {
+.text-content :where(h2, h3) span:first-child {
   font-weight: var(--fw3);
   color: var(--light-text-color);
 }
-.text-content :where(h2,h3) span:last-child {
+.text-content :where(h2, h3) span:last-child {
   color: var(--secondary-dark-color);
   text-transform: uppercase;
   letter-spacing: -2px;
@@ -450,9 +450,9 @@ form.search button:hover {
   flex-wrap: wrap;
   padding: 2em 0;
 }
-.brands .item img{
-  opacity: .25;
-  transition: opacity .3s;
+.brands .item img {
+  opacity: 0.25;
+  transition: opacity 0.3s;
 }
 .brands .item a:hover img {
   opacity: 1;
@@ -498,20 +498,20 @@ form.search button:hover {
   position: relative;
   width: 34px;
   height: 34px;
-  padding: .5em;
+  padding: 0.5em;
   line-height: initial;
   color: var(--secondary-dark-color);
   background-color: var(--light-bg-color);
   border-radius: 5px;
 }
 .products .offer ul li:not(:last-child)::before {
-  content: ':';
+  content: ":";
   position: absolute;
   right: -0.6em;
   color: var(--light-text-color);
 }
 .products :where(.image, .thumbnail) img {
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 .products :where(.image, .thumbnail):hover img {
   transform: scale(1.1);
@@ -532,8 +532,8 @@ form.search button:hover {
   border-radius: var(--percent50);
   line-height: 1;
   background-color: var(--white-color);
-  opacity: .5;
-  transition: var(--trans-background-color), opacity .3s;
+  opacity: 0.5;
+  transition: var(--trans-background-color), opacity 0.3s;
 }
 .products .item:hover .hoverable li a {
   opacity: 1;
@@ -548,14 +548,14 @@ form.search button:hover {
 .products .hoverable li:not(.active) {
   transform: translateX(100%);
   opacity: 0;
-  transition: transform .3s, opacity .2s;
+  transition: transform 0.3s, opacity 0.2s;
 }
 .products .item:hover .hoverable li {
   transform: translateX(0);
-  opacity: 1
+  opacity: 1;
 }
 .products .hoverable li:last-child {
-  transition-delay: .1s;
+  transition-delay: 0.1s;
 }
 .products .discount {
   top: auto;
@@ -595,7 +595,7 @@ form.search button:hover {
   background-repeat-y: no-repeat;
 }
 .products h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 1em;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -673,7 +673,7 @@ form.search button:hover {
   margin: 0;
   gap: 0.75em;
 }
-.products:where(.mini,.main) h3 {
+.products:where(.mini, .main) h3 {
   font-weight: 400;
 }
 
@@ -696,11 +696,14 @@ form.search button:hover {
   padding: 0 1em 1em;
   border-radius: 7px;
   z-index: 1;
-  background: linear-gradient(0deg var(--light-bg-color) 0%, var(--white-color) 70%);
+  background: linear-gradient(
+    0deg var(--light-bg-color) 0%,
+    var(--white-color) 70%
+  );
   opacity: 0;
   visibility: hidden;
   will-change: opacity;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .products.main .item:hover .footer {
   opacity: 1;
@@ -783,14 +786,13 @@ form.search button:hover {
   }
 }
 
-@media  screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .products .price .current {
     font-size: 1.25em;
   }
   .products.mini,
   .banner .row,
-  .widgets .row
-  {
+  .widgets .row {
     flex: 0 0 50%;
   }
   .products.main .item {
@@ -968,12 +970,12 @@ form.search button:hover {
     margin-left: auto;
   }
   /* Products */
-  .trending .products, .product-categories .row {
+  .trending .products,
+  .product-categories .row {
     flex: 0 0 33.3333%;
   }
 
   /*slider*/
-
 
   .newsletter .box {
     display: flex;

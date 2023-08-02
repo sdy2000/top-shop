@@ -1,4 +1,12 @@
+import { useSelector } from "react-redux";
+import { departmentsDiffLanguage } from "../data";
+
 const HomeDepartmentsBar = () => {
+  const currentLanguage = useSelector((store) => store.language);
+  const { data } = departmentsDiffLanguage.find(
+    (dep) => dep.lan === currentLanguage.symbol
+  );
+
   return (
     <div className="header-main mobile-hide">
       <div className="container">
@@ -6,8 +14,8 @@ const HomeDepartmentsBar = () => {
           <div className="left">
             <div className="dpt-cat">
               <div className="dpt-head">
-                <div className="main-text">All Departments</div>
-                <div className="mini-text mobile-hide">Total +500 Products</div>
+                <div className="main-text">{data.department}</div>
+                <div className="mini-text mobile-hide">{data.total}</div>
                 <a href="#" className="dpt-trigger mobile-hide">
                   <i className="ri-menu-3-line ri-xl"></i>
                 </a>
@@ -19,35 +27,35 @@ const HomeDepartmentsBar = () => {
                       <div className="icon-large">
                         <i className="ri-bear-smile-line"></i>
                       </div>
-                      Beauty
+                      {data.beauty}
                       <div className="icon-small">
                         <i className="ri-arrow-right-s-line"></i>
                       </div>
                     </a>
                     <ul>
                       <li>
-                        <a href="#">Makeup</a>
+                        <a href="#">{data.beauty1}</a>
                       </li>
                       <li>
-                        <a href="#">Skin Care</a>
+                        <a href="#">{data.beauty2}</a>
                       </li>
                       <li>
-                        <a href="#">Hair Care</a>
+                        <a href="#">{data.beauty3}</a>
                       </li>
                       <li>
-                        <a href="#">Fragrance</a>
+                        <a href="#">{data.beauty4}</a>
                       </li>
                       <li>
-                        <a href="#">Foot & Hand Care</a>
+                        <a href="#">{data.beauty5}</a>
                       </li>
                       <li>
-                        <a href="#">Tools & Accessories</a>
+                        <a href="#">{data.beauty6}</a>
                       </li>
                       <li>
-                        <a href="#">Shave & Hair Removal</a>
+                        <a href="#">{data.beauty7}</a>
                       </li>
                       <li>
-                        <a href="#">Personal Care</a>
+                        <a href="#">{data.beauty8}</a>
                       </li>
                     </ul>
                   </li>
@@ -57,38 +65,38 @@ const HomeDepartmentsBar = () => {
                       <div className="icon-large">
                         <i className="ri-bluetooth-line"></i>
                       </div>
-                      Electronic
+                      {data.electronic}
                       <div className="icon-small">
                         <i className="ri-arrow-right-s-line"></i>
                       </div>
                     </a>
                     <ul>
                       <li>
-                        <a href="#">Camera</a>
+                        <a href="#">{data.electronic1}</a>
                       </li>
                       <li>
-                        <a href="#">Cell Phones</a>
+                        <a href="#">{data.electronic2}</a>
                       </li>
                       <li>
-                        <a href="#">Computers</a>
+                        <a href="#">{data.electronic3}</a>
                       </li>
                       <li>
-                        <a href="#">GPS & Navigation</a>
+                        <a href="#">{data.electronic4}</a>
                       </li>
                       <li>
-                        <a href="#">Headphones</a>
+                        <a href="#">{data.electronic5}</a>
                       </li>
                       <li>
-                        <a href="#">Home Audio</a>
+                        <a href="#">{data.electronic6}</a>
                       </li>
                       <li>
-                        <a href="#">Television</a>
+                        <a href="#">{data.electronic7}</a>
                       </li>
                       <li>
-                        <a href="#">Video Projectors</a>
+                        <a href="#">{data.electronic8}</a>
                       </li>
                       <li>
-                        <a href="#">Wearable Technology</a>
+                        <a href="#">{data.electronic9}</a>
                       </li>
                     </ul>
                   </li>
@@ -98,29 +106,29 @@ const HomeDepartmentsBar = () => {
                       <div className="icon-large">
                         <i className="ri-t-shirt-air-line"></i>
                       </div>
-                      Womens Fashion
+                      {data.woman_fashion}
                       <div className="icon-small">
                         <i className="ri-arrow-right-s-line"></i>
                       </div>
                     </a>
                     <ul>
                       <li>
-                        <a href="#">Clothing</a>
+                        <a href="#">{data.woman_fashion1}</a>
                       </li>
                       <li>
-                        <a href="#">Shoes</a>
+                        <a href="#">{data.woman_fashion2}</a>
                       </li>
                       <li>
-                        <a href="#">Jewelry</a>
+                        <a href="#">{data.woman_fashion3}</a>
                       </li>
                       <li>
-                        <a href="#">Watches</a>
+                        <a href="#">{data.woman_fashion4}</a>
                       </li>
                       <li>
-                        <a href="#">Handbags</a>
+                        <a href="#">{data.woman_fashion5}</a>
                       </li>
                       <li>
-                        <a href="#">Accessories</a>
+                        <a href="#">{data.woman_fashion6}</a>
                       </li>
                     </ul>
                   </li>
@@ -129,7 +137,7 @@ const HomeDepartmentsBar = () => {
                       <div className="icon-large">
                         <i className="ri-shirt-line"></i>
                       </div>
-                      Mens Fashion
+                      {data.men_fashion}
                     </a>
                   </li>
                   <li>
@@ -137,7 +145,7 @@ const HomeDepartmentsBar = () => {
                       <div className="icon-large">
                         <i className="ri-user-5-line"></i>
                       </div>
-                      Girls Fashion
+                      {data.boy_fashion}
                     </a>
                   </li>
                   <li>
@@ -145,7 +153,7 @@ const HomeDepartmentsBar = () => {
                       <div className="icon-large">
                         <i className="ri-user-6-line"></i>
                       </div>
-                      Boys Fashion
+                      {data.health_house}
                     </a>
                   </li>
                   <li>
@@ -153,7 +161,7 @@ const HomeDepartmentsBar = () => {
                       <div className="icon-large">
                         <i className="ri-heart-pulse-line"></i>
                       </div>
-                      Health & Household
+                      {data.health_house}
                     </a>
                   </li>
                   <li className="has-child homekit">
@@ -161,7 +169,7 @@ const HomeDepartmentsBar = () => {
                       <div className="icon-large">
                         <i className="ri-home-8-line"></i>
                       </div>
-                      Home & Kitchen
+                      {data.home_kitchen}
                       <div className="icon-small">
                         <i className="ri-arrow-right-s-line"></i>
                       </div>
@@ -170,79 +178,39 @@ const HomeDepartmentsBar = () => {
                       <div className="flexcol">
                         <div className="row">
                           <h4>
-                            <a href="#">Kitchen & Dining</a>
+                            <a href="#">{data.home_kitchen1}</a>
                           </h4>
                           <ul>
                             <li>
-                              <a href="#">Kitchen</a>
+                              <a href="#">{data.home_kitchen2}</a>
                             </li>
                             <li>
-                              <a href="#">Dining Room</a>
+                              <a href="#">{data.home_kitchen3}</a>
                             </li>
                             <li>
-                              <a href="#">Pantry</a>
+                              <a href="#">{data.home_kitchen4}</a>
                             </li>
                             <li>
-                              <a href="#">Great Room</a>
+                              <a href="#">{data.home_kitchen5}</a>
                             </li>
                             <li>
-                              <a href="#">Breakfast Nook</a>
+                              <a href="#">{data.home_kitchen6}</a>
                             </li>
                           </ul>
                         </div>
                         <div className="row">
                           <h4>
-                            <a href="#">Living</a>
+                            <a href="#">{data.home_kitchen7}</a>
                           </h4>
                           <ul>
                             <li>
-                              <a href="#">Living Room</a>
+                              <a href="#">{data.home_kitchen8}</a>
                             </li>
                             <li>
-                              <a href="#">Family Room</a>
+                              <a href="#">{data.home_kitchen9}</a>
                             </li>
                             <li>
-                              <a href="#">Son Room</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="flexcol">
-                        <div className="row">
-                          <h4>
-                            <a href="#">Bed & Bath</a>
-                          </h4>
-                          <ul>
-                            <li>
-                              <a href="#">Bathroom</a>
-                            </li>
-                            <li>
-                              <a href="#">Powder Room</a>
-                            </li>
-                            <li>
-                              <a href="#">Bedroom</a>
-                            </li>
-                            <li>
-                              <a href="#">Storage & Closet</a>
-                            </li>
-                            <li>
-                              <a href="#">Baby & Kids</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="row">
-                          <h4>
-                            <a href="#">Utility</a>
-                          </h4>
-                          <ul>
-                            <li>
-                              <a href="#">Laundry</a>
-                            </li>
-                            <li>
-                              <a href="#">Garage</a>
-                            </li>
-                            <li>
-                              <a href="#">Mudroom</a>
+                              <a href="#">{data.home_kitchen10}</a>
                             </li>
                           </ul>
                         </div>
@@ -250,41 +218,81 @@ const HomeDepartmentsBar = () => {
                       <div className="flexcol">
                         <div className="row">
                           <h4>
-                            <a href="#">Outdoor</a>
+                            <a href="#">{data.home_kitchen11}</a>
                           </h4>
                           <ul>
                             <li>
-                              <a href="#">Landscape</a>
+                              <a href="#">{data.home_kitchen12}</a>
                             </li>
                             <li>
-                              <a href="#">Patio</a>
+                              <a href="#">{data.home_kitchen13}</a>
                             </li>
                             <li>
-                              <a href="#">Deck</a>
+                              <a href="#">{data.home_kitchen14}</a>
                             </li>
                             <li>
-                              <a href="#">Pool</a>
+                              <a href="#">{data.home_kitchen15}</a>
                             </li>
                             <li>
-                              <a href="#">Backyard</a>
+                              <a href="#">{data.home_kitchen16}</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div className="row">
+                          <h4>
+                            <a href="#">{data.home_kitchen17}</a>
+                          </h4>
+                          <ul>
+                            <li>
+                              <a href="#">{data.home_kitchen18}</a>
                             </li>
                             <li>
-                              <a href="#">Porch</a>
+                              <a href="#">{data.home_kitchen19}</a>
                             </li>
                             <li>
-                              <a href="#">Exterior</a>
+                              <a href="#">{data.home_kitchen20}</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="flexcol">
+                        <div className="row">
+                          <h4>
+                            <a href="#">{data.home_kitchen21}</a>
+                          </h4>
+                          <ul>
+                            <li>
+                              <a href="#">{data.home_kitchen22}</a>
                             </li>
                             <li>
-                              <a href="#">Outdoor Kitchen</a>
+                              <a href="#">{data.home_kitchen23}</a>
                             </li>
                             <li>
-                              <a href="#">Front Yard</a>
+                              <a href="#">{data.home_kitchen24}</a>
                             </li>
                             <li>
-                              <a href="#">Driveway</a>
+                              <a href="#">{data.home_kitchen25}</a>
                             </li>
                             <li>
-                              <a href="#">PoolHouse</a>
+                              <a href="#">{data.home_kitchen26}</a>
+                            </li>
+                            <li>
+                              <a href="#">{data.home_kitchen27}</a>
+                            </li>
+                            <li>
+                              <a href="#">{data.home_kitchen28}</a>
+                            </li>
+                            <li>
+                              <a href="#">{data.home_kitchen29}</a>
+                            </li>
+                            <li>
+                              <a href="#">{data.home_kitchen30}</a>
+                            </li>
+                            <li>
+                              <a href="#">{data.home_kitchen31}</a>
+                            </li>
+                            <li>
+                              <a href="#">{data.home_kitchen32}</a>
                             </li>
                           </ul>
                         </div>
@@ -296,7 +304,7 @@ const HomeDepartmentsBar = () => {
                       <div className="icon-large">
                         <i className="ri-android-line"></i>
                       </div>
-                      Pet Supplies
+                      {data.pet_supp}
                     </a>
                   </li>
                   <li>
@@ -304,7 +312,7 @@ const HomeDepartmentsBar = () => {
                       <div className="icon-large">
                         <i className="ri-basketball-line"></i>
                       </div>
-                      Sports
+                      {data.sport}
                     </a>
                   </li>
                   <li>
@@ -312,7 +320,7 @@ const HomeDepartmentsBar = () => {
                       <div className="icon-large">
                         <i className="ri-shield-star-line"></i>
                       </div>
-                      Best Seller
+                      {data.best_seller}
                     </a>
                   </li>
                 </ul>
@@ -329,9 +337,9 @@ const HomeDepartmentsBar = () => {
                   type="search"
                   name=""
                   id=""
-                  placeholder="Search for Products"
+                  placeholder={data.placeholder}
                 />
-                <button type="submit">Search</button>
+                <button type="submit">{data.search}</button>
               </form>
             </div>
           </div>
