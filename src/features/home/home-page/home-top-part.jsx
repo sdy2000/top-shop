@@ -95,6 +95,198 @@ export const HomeTopPart = () => {
                       <div className="media">
                         <div className="thumbnail object-cover">
                           <a href="#">
+                            <img src="/assets/products/apparel3.jpg" alt="" />
+                          </a>
+                        </div>
+                        <div className="hoverable">
+                          <ul>
+                            <li className="active">
+                              <a href="#">
+                                <i className="ri-heart-line"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="">
+                                <i className="ri-eye-line"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="">
+                                <i className="ri-shuffle-line"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div className="discount circle flexcenter">
+                          <span>30%</span>
+                        </div>
+                      </div>
+                      <div className="content">
+                        <h3 className="main-links">
+                          <a href="#">Black Womens Coat Dress</a>
+                        </h3>
+                        <div className="rating">
+                          <div className="stars"></div>
+                          <span className="mini-text">(2,548)</span>
+                        </div>
+                        <div className="price">
+                          <span className="current">$129.99</span>
+                          <span className="normal mini-text">$179.99</span>
+                        </div>
+                        <div className="mini-text">
+                          <p>3000 sold</p>
+                          <p>Free Shipping</p>
+                        </div>
+                      </div>
+                    </div>
+                      <div className="item">
+                        <div className="media">
+                          <div className="thumbnail object-cover">
+                            <a href="#">
+                              <img src="/assets/products/apparel2.jpg" alt="" />
+                            </a>
+                          </div>
+                          <div className="hoverable">
+                            <ul>
+                              <li className="active">
+                                <a href="#">
+                                  <i className="ri-heart-line"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="">
+                                  <i className="ri-eye-line"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="">
+                                  <i className="ri-shuffle-line"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="discount circle flexcenter">
+                            <span>47%</span>
+                          </div>
+                        </div>
+                        <div className="content">
+                          <h3 className="main-links">
+                            <a href="#">Womens Lightweight</a>
+                          </h3>
+                          <div className="rating">
+                            <div className="stars"></div>
+                            <span className="mini-text">(994)</span>
+                          </div>
+                          <div className="price">
+                            <span className="current">$37.50</span>
+                            <span className="normal mini-text">$45.50</span>
+                          </div>
+                          <div className="mini-text">
+                            <p>1257 sold</p>
+                            <p>Free Shipping</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="item">
+                        <div className="media">
+                          <div className="thumbnail object-cover">
+                            <a href="#">
+                              <img src="/assets/products/home2.jpg" alt="" />
+                            </a>
+                          </div>
+                          <div className="hoverable">
+                            <ul>
+                              <li className="active">
+                                <a href="#">
+                                  <i className="ri-heart-line"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="">
+                                  <i className="ri-eye-line"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="">
+                                  <i className="ri-shuffle-line"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="discount circle flexcenter">
+                            <span>44%</span>
+                          </div>
+                        </div>
+                        <div className="content">
+                          <h3 className="main-links">
+                            <a href="#">Dimmable Ceiling Light Modern</a>
+                          </h3>
+                          <div className="rating">
+                            <div className="stars"></div>
+                            <span className="mini-text">(543)</span>
+                          </div>
+                          <div className="price">
+                            <span className="current">$279.99</span>
+                            <span className="normal mini-text">$499.99</span>
+                          </div>
+                          <div className="mini-text">
+                            <p>995 sold</p>
+                            <p>Free Shipping</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="item">
+                        <div className="media">
+                          <div className="thumbnail object-cover">
+                            <a href="#">
+                              <img src="/assets/products/home3.jpg" alt="" />
+                            </a>
+                          </div>
+                          <div className="hoverable">
+                            <ul>
+                              <li className="active">
+                                <a href="#">
+                                  <i className="ri-heart-line"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="">
+                                  <i className="ri-eye-line"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="">
+                                  <i className="ri-shuffle-line"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="discount circle flexcenter">
+                            <span>18%</span>
+                          </div>
+                        </div>
+                        <div className="content">
+                          <h3 className="main-links">
+                            <a href="#">Modern Storage Cabinet</a>
+                          </h3>
+                          <div className="rating">
+                            <div className="stars"></div>
+                            <span className="mini-text">(335)</span>
+                          </div>
+                          <div className="price">
+                            <span className="current">$129.99</span>
+                            <span className="normal mini-text">$159.99</span>
+                          </div>
+                          <div className="mini-text">
+                            <p>700 sold</p>
+                            <p>Free Shipping</p>
+                          </div>
+                        </div>
+                      </div>
+                    <div className="item">
+                      <div className="media">
+                        <div className="thumbnail object-cover">
+                          <a href="#">
                             <img src="/assets/products/shoe1.jpg" alt="" />
                           </a>
                         </div>
@@ -290,200 +482,7 @@ export const HomeTopPart = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="row products mini">
-                    <div className="item">
-                      <div className="media">
-                        <div className="thumbnail object-cover">
-                          <a href="#">
-                            <img src="/assets/products/apparel3.jpg" alt="" />
-                          </a>
-                        </div>
-                        <div className="hoverable">
-                          <ul>
-                            <li className="active">
-                              <a href="#">
-                                <i className="ri-heart-line"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="">
-                                <i className="ri-eye-line"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="">
-                                <i className="ri-shuffle-line"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="discount circle flexcenter">
-                          <span>30%</span>
-                        </div>
-                      </div>
-                      <div className="content">
-                        <h3 className="main-links">
-                          <a href="#">Black Womens Coat Dress</a>
-                        </h3>
-                        <div className="rating">
-                          <div className="stars"></div>
-                          <span className="mini-text">(2,548)</span>
-                        </div>
-                        <div className="price">
-                          <span className="current">$129.99</span>
-                          <span className="normal mini-text">$179.99</span>
-                        </div>
-                        <div className="mini-text">
-                          <p>3000 sold</p>
-                          <p>Free Shipping</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="item">
-                      <div className="media">
-                        <div className="thumbnail object-cover">
-                          <a href="#">
-                            <img src="/assets/products/apparel2.jpg" alt="" />
-                          </a>
-                        </div>
-                        <div className="hoverable">
-                          <ul>
-                            <li className="active">
-                              <a href="#">
-                                <i className="ri-heart-line"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="">
-                                <i className="ri-eye-line"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="">
-                                <i className="ri-shuffle-line"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="discount circle flexcenter">
-                          <span>47%</span>
-                        </div>
-                      </div>
-                      <div className="content">
-                        <h3 className="main-links">
-                          <a href="#">Womens Lightweight</a>
-                        </h3>
-                        <div className="rating">
-                          <div className="stars"></div>
-                          <span className="mini-text">(994)</span>
-                        </div>
-                        <div className="price">
-                          <span className="current">$37.50</span>
-                          <span className="normal mini-text">$45.50</span>
-                        </div>
-                        <div className="mini-text">
-                          <p>1257 sold</p>
-                          <p>Free Shipping</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="item">
-                      <div className="media">
-                        <div className="thumbnail object-cover">
-                          <a href="#">
-                            <img src="/assets/products/home2.jpg" alt="" />
-                          </a>
-                        </div>
-                        <div className="hoverable">
-                          <ul>
-                            <li className="active">
-                              <a href="#">
-                                <i className="ri-heart-line"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="">
-                                <i className="ri-eye-line"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="">
-                                <i className="ri-shuffle-line"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="discount circle flexcenter">
-                          <span>44%</span>
-                        </div>
-                      </div>
-                      <div className="content">
-                        <h3 className="main-links">
-                          <a href="#">Dimmable Ceiling Light Modern</a>
-                        </h3>
-                        <div className="rating">
-                          <div className="stars"></div>
-                          <span className="mini-text">(543)</span>
-                        </div>
-                        <div className="price">
-                          <span className="current">$279.99</span>
-                          <span className="normal mini-text">$499.99</span>
-                        </div>
-                        <div className="mini-text">
-                          <p>995 sold</p>
-                          <p>Free Shipping</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="item">
-                      <div className="media">
-                        <div className="thumbnail object-cover">
-                          <a href="#">
-                            <img src="/assets/products/home3.jpg" alt="" />
-                          </a>
-                        </div>
-                        <div className="hoverable">
-                          <ul>
-                            <li className="active">
-                              <a href="#">
-                                <i className="ri-heart-line"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="">
-                                <i className="ri-eye-line"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="">
-                                <i className="ri-shuffle-line"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="discount circle flexcenter">
-                          <span>18%</span>
-                        </div>
-                      </div>
-                      <div className="content">
-                        <h3 className="main-links">
-                          <a href="#">Modern Storage Cabinet</a>
-                        </h3>
-                        <div className="rating">
-                          <div className="stars"></div>
-                          <span className="mini-text">(335)</span>
-                        </div>
-                        <div className="price">
-                          <span className="current">$129.99</span>
-                          <span className="normal mini-text">$159.99</span>
-                        </div>
-                        <div className="mini-text">
-                          <p>700 sold</p>
-                          <p>Free Shipping</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </div>

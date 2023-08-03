@@ -660,9 +660,14 @@ form.search button:hover {
     04.Product
         c. Mini product
 */
-
+.products.mini {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .products.mini .item {
   margin-bottom: 2em;
+  flex: 0 1 40%;
 }
 .products.mini .media {
   width: 130px;
@@ -793,10 +798,10 @@ form.search button:hover {
   .products.mini,
   .banner .row,
   .widgets .row {
-    flex: 0 0 50%;
+    /*flex: 0 0 50%;*/
   }
   .products.main .item {
-    flex: 0 0 33.333%;
+    /*flex: 0 0 33.333%;*/
   }
 }
 @media screen and (min-width: 992px) {
@@ -972,7 +977,7 @@ form.search button:hover {
   /* Products */
   .trending .products,
   .product-categories .row {
-    flex: 0 0 33.3333%;
+    /*flex: 0 0 33.3333%;*/
   }
 
   /*slider*/
