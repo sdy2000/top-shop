@@ -134,7 +134,12 @@
     @apply hidden;
   }
   .object-cover img {
-    /*@apply absolute block h-full w-full object-cover; error */
+    position: absolute;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: var(--percent100);
+    height: var(--percent100);
+    display: block;
   }
   .products .media {
     @apply shrink-0 overflow-hidden relative;
@@ -616,9 +621,9 @@ form.search button:hover {
   font-weight: var(--fw6);
 }
 .flexwrap .row {
-  flex: 0 0 100%;
+  flex: 0 0 33.3333%;
   width: 100%;
-  margin-bottom: 2em;
+  margin: 3rem auto;
 }
 /*
        04.Product
@@ -664,6 +669,8 @@ form.search button:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex: 0 0 66.3333%;
+  margin: 0 auto;
 }
 .products.mini .item {
   margin-bottom: 2em;
@@ -790,7 +797,16 @@ form.search button:hover {
     flex: 0 0 50%;
   }
 }
-
+@media screen and (481px <= width <= 615px) {
+  .products.mini {
+    justify-content: center;
+  }
+}
+@media screen and (481px <= width <= 768px) {
+  .products.mini {
+    flex: 0 0 100%;
+  }
+}
 @media screen and (min-width: 768px) {
   .products .price .current {
     font-size: 1.25em;
@@ -798,10 +814,22 @@ form.search button:hover {
   .products.mini,
   .banner .row,
   .widgets .row {
-    /*flex: 0 0 50%;*/
+    flex: 0 0 50%;
+  }
+  .products.big {
+    flex: 0 0 100%;
   }
   .products.main .item {
-    /*flex: 0 0 33.333%;*/
+    flex: 0 0 33.333%;
+  }
+  .products.mini {
+    flex: 0 0 100%;
+    gap:0 1rem;
+  }
+}
+@media screen and (768px <= width <=  992px) {
+  .products.mini {
+    gap:0 6rem;
   }
 }
 @media screen and (min-width: 992px) {
@@ -935,16 +963,16 @@ form.search button:hover {
   /*    Showing the first sub menu*/
 
   .dpt-menu .beauty ul {
-    background-image: url("/assets/menu/menu_bg1.jpg");
+    background-image: url("../../public/assets/menu/menu_bg1.jpg");
   }
   .dpt-menu .electronic ul {
-    background-image: url("/assets/menu/menu_bg2.jpg");
+    background-image: url("../../public/assets/menu/menu_bg2.jpg");
   }
   .dpt-menu .fashion ul {
-    background-image: url("/assets/menu/menu_bg3.jpg");
+    background-image: url("../../public/assets/menu/menu_bg3.jpg");
   }
   .dpt-menu .homekit .mega {
-    background-image: url("/assets/menu/menu_bg4.jpg");
+    background-image: url("../../public/assets/menu/menu_bg4.jpg");
   }
   .dpt-menu .has-child > :where(ul, .mega)::before {
     content: "";
@@ -970,14 +998,21 @@ form.search button:hover {
     flex: 0 0 25%;
   }
   /*    Department */
+
   .slider > div > .wrapper {
     width: calc(100% - (370px + 3em));
     margin-left: auto;
   }
   /* Products */
-  .trending .products,
+  .products.big {
+    flex: 0 0 33.3333%;
+  }
+  .products.mini {
+    flex: 0 0 66.3333%;
+    gap: 0 6rem;
+  }
   .product-categories .row {
-    /*flex: 0 0 33.3333%;*/
+    flex: 0 0 33.3333%;
   }
 
   /*slider*/
