@@ -824,12 +824,12 @@ form.search button:hover {
   }
   .products.mini {
     flex: 0 0 100%;
-    gap:0 1rem;
+    gap: 0 1rem;
   }
 }
-@media screen and (768px <= width <=  992px) {
+@media screen and (768px <= width <= 992px) {
   .products.mini {
-    gap:0 6rem;
+    gap: 0 6rem;
   }
 }
 @media screen and (min-width: 992px) {
@@ -963,16 +963,16 @@ form.search button:hover {
   /*    Showing the first sub menu*/
 
   .dpt-menu .beauty ul {
-    background-image: url("../../public/assets/menu/menu_bg1.jpg");
+    background-image: url("/assets/menu/menu_bg1.jpg");
   }
   .dpt-menu .electronic ul {
-    background-image: url("../../public/assets/menu/menu_bg2.jpg");
+    background-image: url("/assets/menu/menu_bg2.jpg");
   }
   .dpt-menu .fashion ul {
-    background-image: url("../../public/assets/menu/menu_bg3.jpg");
+    background-image: url("/assets/menu/menu_bg3.jpg");
   }
   .dpt-menu .homekit .mega {
-    background-image: url("../../public/assets/menu/menu_bg4.jpg");
+    background-image: url("/assets/menu/menu_bg4.jpg");
   }
   .dpt-menu .has-child > :where(ul, .mega)::before {
     content: "";
