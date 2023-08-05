@@ -11,3 +11,17 @@ export const formatNumberWithCommas = (num) => {
   }
   return num;
 };
+
+export const roundToNearestHundred = (num) => {
+  if (num > 10000) {
+    num = Math.round(num / 10000) * 10000;
+  } else if (num > 1000) {
+    num = Math.round(num / 1000) * 1000;
+  } else if (num > 100) {
+    num = Math.round(num / 100) * 100;
+  } else if (num > 10) {
+    num = Math.round(num / 10) * 10;
+  }
+
+  return num;
+};

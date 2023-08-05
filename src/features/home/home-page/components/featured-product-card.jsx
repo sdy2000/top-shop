@@ -1,9 +1,8 @@
 import { useSelector } from "react-redux";
 import { formatNumberWithCommas, roundToNearestHundred } from "@/utils";
 
-const TrendingProductCard = (props) => {
+const FeaturedProductCard = (props) => {
   const currentLanguage = useSelector((store) => store.language);
-
   return (
     <div className="item">
       <div className="media">
@@ -41,30 +40,33 @@ const TrendingProductCard = (props) => {
         </div>
       </div>
       <div className="content">
+        <div className="rating">
+          <div className="stars"></div>
+          <span className="mini-text">
+            {" "}
+            ({formatNumberWithCommas(props.rate_count)})
+          </span>
+        </div>
+        {props.description && (
+          <div className="footer">
+            <ul className="mini-text">
+              <li>65% Polyester,35% Cotton</li>
+              <li>Imported</li>
+              <li>Machine Wash</li>
+            </ul>
+          </div>
+        )}
         <h3 className="main-links">
           <a href="#">
             {props.title.find((t) => t.lan === currentLanguage.symbol).text}
           </a>
         </h3>
-        <div className="rating">
-          <div className="stars"></div>
-          <span className="mini-text">
-            ({formatNumberWithCommas(props.rate_count)})
-          </span>
-        </div>
         <div className="price">
-          <span className="current">$129.99</span>
-          <span className="normal mini-text">$179.99</span>
-        </div>
-        <div className="mini-text">
-          <p>+{roundToNearestHundred(props.sold)} sold</p>
-          <p>Free Shipping</p>
-          {props.existence < 10 && (
-            <p className="stock-danger">Stock : {props.existence} left</p>
-          )}
+          <span className="current">$56.50</span>
+          <span className="normal mini-text">$75.50</span>
         </div>
       </div>
     </div>
   );
 };
-export default TrendingProductCard;
+export default FeaturedProductCard;
