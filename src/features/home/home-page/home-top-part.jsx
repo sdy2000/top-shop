@@ -7,8 +7,12 @@ import {
   TrendingProductCard,
 } from "./components";
 import { trendingProducts, featuredProducts } from "./data";
+import { useSelector } from "react-redux";
 
 export const HomeTopPart = () => {
+  const currentLanguage = useSelector((store) => store.language);
+  // const data ;
+
   return (
     <>
       <HomeDepartmentsBar />
